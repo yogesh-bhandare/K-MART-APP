@@ -10,6 +10,7 @@ import {
 } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import Footer from "../components/Footer";
+import Ionicons from "@expo/vector-icons/Ionicons";
 
 function MandiScreen() {
   const navigation = useNavigation();
@@ -55,15 +56,15 @@ function MandiScreen() {
           </ScrollView>
           <View className="w-24 h-24 flex flex-col justify-center items-center border-l-2 border-gray-200 ">
             <TouchableOpacity className="bg-green-500 w-10 h-10 rounded-full flex flex-row justify-center">
-              <Text className="text-white text-4xl text-center font-bold">+</Text>
+              <Ionicons name="plus" color={'#fff'} size={20} />
             </TouchableOpacity>
             <Text className=" text-xs pt-1 text-center">Add/Remove crop</Text>
           </View>
         </View>
       </View>
       <View className="py-1 bg-gray-200"></View>
-      <View className=" max-h-[69vh]">
-        <View className="mx-4 my-4 p-2 items-center bg-gray-200 rounded-full">
+      <View className=" max-h-[68vh]">
+      <View className="mx-4 my-4 p-2 items-center bg-gray-200 rounded-full">
           <TextInput
             placeholder="Search"
             className=" text-lg font-light"

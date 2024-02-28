@@ -23,7 +23,7 @@ export default function Navigation(){
         <Stack.Navigator screenOptions={{
             headerShown: false,
         }}>
-          {/* <Stack.Screen name="Screen1" component={FirstScreen} /> 
+          <Stack.Screen name="Screen1" component={FirstScreen} /> 
           <Stack.Screen name="LangScreen" component={ChangeLang} />
           <Stack.Screen name="VerifyNumScreen" component={VerifyMobile} />
           <Stack.Screen name="VerifyOTPScreen" component={VerifyOTP} />
@@ -33,11 +33,11 @@ export default function Navigation(){
           <Stack.Screen name="MoreScreen" component={MoreScreen} />
           <Stack.Screen name="ProfileScreen" component={ProfileScreen} />
           <Stack.Screen name="SearchScreen" component={Search} />
-          <Stack.Screen name="SettingScreen" component={SettingsScreen} /> */}
+          <Stack.Screen name="SettingScreen" component={SettingsScreen} />
 
           {/* Additonal Screens */}
-          {/* <Stack.Screen name="LocationScreen" component={ChangeLocation} /> */}
-          {/* <Stack.Screen name="CropDoctorScreen" component={CropDoctorScreen} /> */}
+          <Stack.Screen name="LocationScreen" component={ChangeLocation} />
+          <Stack.Screen name="CropDoctorScreen" component={CropDoctorScreen} />
           <Stack.Screen name="WeatherScreen" component={WeatherScreen} />
         </Stack.Navigator>
       </NavigationContainer>

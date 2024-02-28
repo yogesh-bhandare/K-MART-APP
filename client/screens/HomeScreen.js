@@ -15,7 +15,7 @@ export default function HomeScreen(){
           <Text className="text-xl font-semibold">Home</Text>
         </View>
       </View>
-        <View className="h-[83vh]"></View>
+        <View className="h-[82vh]"></View>
         <Footer/>
       </SafeAreaView>
     )

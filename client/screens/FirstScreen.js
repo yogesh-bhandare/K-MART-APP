@@ -12,9 +12,9 @@ function FirstScreen() {
         <View className=" px-4 py-4 border-gray-200 border-b-2">
         <View className="flex flex-row items-center justify-between pt-1 ">
           <Text className="text-xl font-semibold">Select</Text>
-            <TouchableOpacity onPress={() => navigation.navigate('LangScreen')} className="px-0.5 flex flex-row items-center bg-white border-2 border-gray-200 h-8 rounded-md ">
-                <Ionicons name="language-outline" size={16}/>
-                <Text className=" text-center text-xs p-1">Change Language</Text>
+            <TouchableOpacity onPress={() => navigation.navigate('LangScreen')} className="px-0.5 flex flex-row items-center justify-center bg-white border-2 border-gray-200 h-10 rounded-md ">
+                <Ionicons name="language-outline" size={16} color={'rgb(34, 197, 94)'}/>
+                <Text className=" text-center text-xs p-1 text-green-500">Change Language</Text>
             </TouchableOpacity>
         </View>
         </View>

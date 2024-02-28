@@ -18,7 +18,7 @@ function VerifyMobile() {
   return (
     <SafeAreaView className="bg-white">
         <View className="h-18 px-4 py-2 flex flex-row items-center border-gray-200 border-b-2">
-        <TouchableOpacity onPress={() => navigation.navigate("FirstScreen")}>
+        <TouchableOpacity onPress={() => navigation.navigate("Screen1")}>
           <Ionicons name="chevron-back" size={22} color={"rgb(75 85 99)"} />
         </TouchableOpacity>
             <Text className=" text-lg font-normal text-gray-500 py-2">Verify your Mobile Number</Text>
