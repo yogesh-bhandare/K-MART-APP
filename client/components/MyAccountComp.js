@@ -38,7 +38,7 @@ const MyAccountComp = () => {
           />
         </View>
       </TouchableOpacity>
-      <TouchableOpacity onPress={() => navigation.navigate("LocationScreen")}>
+      <TouchableOpacity onPress={() => navigation.navigate("MyOrderScreen")}>
         <View className="px-4 py-2 border-b-2 border-gray-200 flex flex-row justify-between items-center">
           <View className="flex flex-row justify-start items-center">
             <Ionicons name="cart-outline" size={20} />
