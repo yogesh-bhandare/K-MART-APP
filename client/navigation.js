@@ -15,6 +15,7 @@ import ChangeLocation from './AdditionalScreens/ChangeLocation';
 import CropDoctorScreen from './AdditionalScreens/CropDoctorScreen';
 import WeatherScreen from './AdditionalScreens/WeatherScreen';
 import SettingsScreen from './AdditionalScreens/SettingsScreen';
+import InviteFriendScreen from './AdditionalScreens/InviteFriendScreen';
 const Stack = createNativeStackNavigator();
 
 export default function Navigation(){
@@ -39,6 +40,7 @@ export default function Navigation(){
           <Stack.Screen name="LocationScreen" component={ChangeLocation} />
           <Stack.Screen name="CropDoctorScreen" component={CropDoctorScreen} />
           <Stack.Screen name="WeatherScreen" component={WeatherScreen} />
+          <Stack.Screen name="InviteFriendScreen" component={InviteFriendScreen} />
         </Stack.Navigator>
       </NavigationContainer>
     )

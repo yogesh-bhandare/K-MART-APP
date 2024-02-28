@@ -55,8 +55,8 @@ function MandiScreen() {
             </View>
           </ScrollView>
           <View className="w-24 h-24 flex flex-col justify-center items-center border-l-2 border-gray-200 ">
-            <TouchableOpacity className="bg-green-500 w-10 h-10 rounded-full flex flex-row justify-center">
-              <Ionicons name="plus" color={'#fff'} size={20} />
+            <TouchableOpacity className="bg-green-500 w-10 h-10 rounded-full flex flex-row justify-center items-center">
+              <Ionicons name="add" color={'#fff'} size={30} />
             </TouchableOpacity>
             <Text className=" text-xs pt-1 text-center">Add/Remove crop</Text>
           </View>
@@ -79,7 +79,7 @@ function MandiScreen() {
         <View className="flex flex-row justify-evenly border-b-2 h-14 border-gray-200">
           <View className="px-2 py-2">
             <TouchableOpacity className="h-8 lex items-center justify-center rounded-full w-44 bg-slate-200 border-2 border-gray-300">
-              <Text className="font-medium text-sm f">
+              <Text className="font-medium text-sm ">
                 Sort by Distance
               </Text>
             </TouchableOpacity>
