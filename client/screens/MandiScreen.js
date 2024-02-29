@@ -71,7 +71,7 @@ function MandiScreen() {
     },
     {
       id: 3,
-      name: "Junar",
+      name: "Junnar",
       distance: "40 km",
       priceTodayWithData: "90 - 140",
       priceRange: "19 Feb ~ 8kg",
@@ -91,8 +91,10 @@ function MandiScreen() {
       priceRange: "18 Feb ~ 7kg",
     },
   ]);
+  
+  const [pinnedItems, setPinnedItems] = useState([]);
 
-  const renderCards = ({ item }) => (
+  const renderCrop = ({ item }) => (
     <View className="w-24 h-24 flex flex-col justify-center items-center ">
       <Image
         source={{
@@ -110,7 +112,10 @@ function MandiScreen() {
         <View className="pl-4 pt-2">
           <Text className="text-xl font-semibold">{item.name}</Text>
           <Text className="text-base text-gray-600 pb-4">{item.distance}</Text>
-          <TouchableOpacity className="bg-green-500 w-20 h-8 flex justify-center items-center">
+          <TouchableOpacity 
+            className="bg-green-500 w-20 h-8 flex justify-center items-center"
+            onPress={() => handlePinItem(item)} // Call handlePinItem on press
+          >
             <Text className=" text-lg font-semibold text-white">Follow</Text>
           </TouchableOpacity>
         </View>
@@ -131,6 +136,12 @@ function MandiScreen() {
     </View>
   );
 
+  const handlePinItem = (item) => {
+      setPinnedItems([item, ...pinnedItems]);
+  };
+
+
+  
   return (
     <SafeAreaView className="bg-white">
       <View className=" px-4 py-4 border-gray-200 border-b-2">
@@ -145,7 +156,7 @@ function MandiScreen() {
         <View className=" flex flex-row justify-between">
           <FlatList
             data={cropList}
-            renderItem={renderCards}
+            renderItem={renderCrop}
             keyExtractor={(item) => item.id.toString()}
             horizontal
             showsHorizontalScrollIndicator={false}
@@ -160,6 +171,11 @@ function MandiScreen() {
       </View>
       <View className="py-1 bg-gray-200"></View>
       <View className=" max-h-[68vh]">
+      <FlatList
+        data={pinnedItems}
+        renderItem={renderItem}
+        keyExtractor={(item) => item.id.toString()}
+      />
         <View className="mx-4 my-4 p-2 items-center bg-gray-200 rounded-full">
           <TextInput
             placeholder="Search"
