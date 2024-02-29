@@ -1,21 +1,32 @@
-import { useNavigation } from "@react-navigation/native";
+import { useNavigation, useRoute } from "@react-navigation/native";
 import React, { useState } from "react";
 import { View, Text, TouchableOpacity, TextInput } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import Ionicons from "@expo/vector-icons/Ionicons";
-import * as Yup from "yup";
 
 function VerifyOTP() {
   const navigation = useNavigation();
+  const route = useRoute();
+  const [verifyOTP, setVerifyOTP] = useState('');
+  const phoneNumber = route.params.phoneNumber;
 
-  const otpLength = Yup.object().shape({
-    otpLength: Yup.number()
-    .min(6, 'Invalid OTP')
-    .max(6, 'Invalid OTP')
-    .required('Enter OTP')
-  })
+  const handleOTPChange = (value) => {
+    const formattedValue = value.replace(/\D/g, '');
+    setVerifyOTP(formattedValue);
+  };
 
-  const [verifyOTP, setVerifyOTP] = useState()
+  const handleSubmit = () => {
+    if (verifyOTP.length === 6) {
+      const hardcodedOTP = '123456'; 
+      if (verifyOTP === hardcodedOTP) {
+        navigation.navigate('HomeScreen');
+      } else {
+        alert('Invalid OTP. Please enter the correct OTP.');
+      }
+    } else {
+      alert('OTP must be 6 digits long.');
+    }
+  };
 
   return (
     <SafeAreaView className="bg-white">
@@ -31,28 +42,31 @@ function VerifyOTP() {
             OTP sent via sms on
           </Text>
           <View className="flex flex-row items-center pt-1 ">
-            <Text className="text-xl font-semibold">7757997140</Text>
+            <Text className="text-xl font-semibold">{phoneNumber}</Text>
+            <TouchableOpacity  onPress={() => navigation.navigate('VerifyNumScreen')}>
             <Text className="text-base font-bold text-green-500 pl-2">
               Change
             </Text>
+            </TouchableOpacity>
           </View>
         </View>
         <View className="px-4 py-4">
           <TextInput
+            keyboardType='numeric' value={verifyOTP} onChangeText={handleOTPChange}
             placeholder="Enter 6 digit OTP here"
             className=" px-4 py-2 text-lg font-light h-18 border-gray-200 border-2 rounded-md"
           ></TextInput>
         </View>
         <View className="px-4">
-            <View>
-                <Text>Resend OTP</Text>
-            </View>
+        <TouchableOpacity onPress={() => alert('Resend OTP')}>
+            <Text>Resend OTP</Text>
+          </TouchableOpacity>
             <Text className="text-sm font-normal text-gray-500">Didn't receive the OTP? Please check your network or check the number you have added</Text>
         </View>
       </View>
       <View className="h-[100vh]">
         <View className="p-4 ">
-          <TouchableOpacity onPress={() => navigation.navigate('HomeScreen')} className=" h-14 rounded-lg bg-green-500 flex justify-center items-center">
+          <TouchableOpacity onPress={handleSubmit} className=" h-14 rounded-lg bg-green-500 flex justify-center items-center">
             <Text className="text-center text-lg font-semibold text-white">
               Proceed
             </Text>

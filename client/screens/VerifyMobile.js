@@ -45,11 +45,9 @@ function VerifyMobile() {
             </View>
             <View className="p-4">
                 <TextInput
-                        keyboardType='numeric'
-                        value={phoneNumber}
-                        onChangeText={handlePhoneNumberChange}                
-                 placeholder='Enter Phone Number' className=" pl-4 text-lg font-light h-14 border-gray-300 border-2 rounded-md">
-
+                keyboardType='numeric' value={phoneNumber} onChangeText={handlePhoneNumberChange}                
+                placeholder='Enter Phone Number' 
+                className=" pl-4 text-lg font-light h-14 border-gray-300 border-2 rounded-md">
                 </TextInput>
             </View>
         </View>
