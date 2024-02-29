@@ -17,7 +17,7 @@ const SettingsScreen = () => {
         <Text className=" text-sm text-gray-600">Settings</Text>
       </View>
       <View className="h-[84%]">
-        <TouchableOpacity onPress={() => navigation.navigate("LangScreen")}>
+        <TouchableOpacity onPress={() => navigation.navigate("ChangeLanguageScreen2")}>
           <View className="px-4 py-2 border-b-2 border-gray-200 flex flex-row justify-between items-center">
             <View className="flex flex-row justify-start items-center">
               <Ionicons name="language-outline" size={20} />
