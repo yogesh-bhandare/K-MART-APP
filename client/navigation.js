@@ -17,6 +17,11 @@ import WeatherScreen from './AdditionalScreens/WeatherScreen';
 import SettingsScreen from './AdditionalScreens/SettingsScreen';
 import InviteFriendScreen from './AdditionalScreens/InviteFriendScreen';
 import MyOrders from './AdditionalScreens/MyOrders';
+import JunnarScreen from './MerchantScreens/JunnarScreen';
+import KhedScreen from './MerchantScreens/KhedScreen';
+import PimpriScreen from './MerchantScreens/PimpriScreen';
+import SataraScreen from './MerchantScreens/SataraScreen';
+import WaiScreen from './MerchantScreens/WaiScreen';
 const Stack = createNativeStackNavigator();
 
 export default function Navigation(){
@@ -43,6 +48,14 @@ export default function Navigation(){
           <Stack.Screen name="WeatherScreen" component={WeatherScreen} />
           <Stack.Screen name="InviteFriendScreen" component={InviteFriendScreen} />
           <Stack.Screen name="MyOrderScreen" component={MyOrders} />
+
+          {/* Merchant Screens */}
+          <Stack.Screen name="JunnarScreen" component={JunnarScreen} />
+          <Stack.Screen name="KhedScreen" component={KhedScreen} />
+          <Stack.Screen name="PimpriScreen" component={PimpriScreen} />
+          <Stack.Screen name="SataraScreen" component={SataraScreen} />
+          <Stack.Screen name="WaiScreen" component={WaiScreen} />
+
         </Stack.Navigator>
       </NavigationContainer>
     )

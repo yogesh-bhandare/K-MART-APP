@@ -61,6 +61,7 @@ function MandiScreen() {
       distance: "33 km",
       priceTodayWithData: "100 - 150",
       priceRange: "21 Feb ~ 10kg",
+      screenName: "KhedSceen",
     },
     {
       id: 2,
@@ -68,6 +69,7 @@ function MandiScreen() {
       distance: "25 km",
       priceTodayWithData: "120 - 170",
       priceRange: "20 Feb ~ 9kg",
+      screenName: "WaiScreen",
     },
     {
       id: 3,
@@ -75,6 +77,7 @@ function MandiScreen() {
       distance: "40 km",
       priceTodayWithData: "90 - 140",
       priceRange: "19 Feb ~ 8kg",
+      screenName: "JunnarScreen",
     },
     {
       id: 4,
@@ -82,6 +85,7 @@ function MandiScreen() {
       distance: "15 km",
       priceTodayWithData: "130 - 180",
       priceRange: "22 Feb ~ 11kg",
+      screenName: "SataraScreen",
     },
     {
       id: 5,
@@ -89,6 +93,7 @@ function MandiScreen() {
       distance: "60 km",
       priceTodayWithData: "110 - 160",
       priceRange: "18 Feb ~ 7kg",
+      screenName: "PimpriScreen",
     },
   ]);
   
@@ -96,8 +101,14 @@ function MandiScreen() {
 
   const [sortBy, setSortBy] = useState(null);
 
+  const [selectCrop, setSelectCrop] = useState(false);
+
+  const handlePress = () => {
+    setSelectCrop(!selectCrop);
+  }
+
   const renderCrop = ({ item }) => (
-    <View className="w-24 h-24 flex flex-col justify-center items-center ">
+    <TouchableOpacity onPress={handlePress} className="w-24 h-24 flex flex-col justify-center items-center ">
       <Image
         source={{
           uri: item.imgURI,
@@ -105,10 +116,15 @@ function MandiScreen() {
         className="h-14 w-14"
       ></Image>
       <Text>{item.name}</Text>
-    </View>
+    </TouchableOpacity>
   );
 
+  const handleListItemPress = (screenName, itemId) => {
+    navigation.navigate(screenName, {itemId: itemId})
+  }
+
   const renderItem = ({ item }) => (
+    <TouchableOpacity onPress={() => (handleListItemPress(item.screenName,item.id))}>
     <View className="border-b-2 border-gray-200 pb-3">
       <View className=" flex flex-row justify-between">
         <View className="pl-4 pt-2">
@@ -116,7 +132,7 @@ function MandiScreen() {
           <Text className="text-base text-gray-600 pb-4">{item.distance}</Text>
           <TouchableOpacity 
             className="bg-green-500 w-20 h-8 flex justify-center items-center"
-            onPress={() => handlePinItem(item)} // Call handlePinItem on press
+            onPress={() => handlePinItem(item)}
           >
             <Text className=" text-lg font-semibold text-white">Follow</Text>
           </TouchableOpacity>
@@ -136,6 +152,7 @@ function MandiScreen() {
         </View>
       </View>
     </View>
+    </TouchableOpacity>
   );
 
   const handlePinItem = (item) => {
@@ -161,6 +178,8 @@ function MandiScreen() {
     setMarketNearby(sortedMarketNearby);
     setSortBy('price');
   };
+
+
 
   return (
     <SafeAreaView className="bg-white">
