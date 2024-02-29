@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { TouchableOpacity } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { Text, View } from "react-native";
@@ -7,6 +7,30 @@ import Ionicons from "@expo/vector-icons/Ionicons";
 
 function ChangeLang() {
   const navigation = useNavigation();
+
+  const [language, setaanguage] = useState([
+    {id: 1, langName: 'English', symbol: 'En'},
+    {id: 2, langName: 'English', symbol: 'En'},
+    {id: 3, langName: 'English', symbol: 'En'},
+    {id: 4, langName: 'English', symbol: 'En'},
+    {id: 5, langName: 'English', symbol: 'En'},
+    {id: 6, langName: 'English', symbol: 'En'},
+    {id: 7, langName: 'English', symbol: 'En'},
+    {id: 8, langName: 'English', symbol: 'En'},
+    {id: 9, langName: 'English', symbol: 'En'},
+    {id: 10, langName: 'English', symbol: 'En'},
+  ]);
+
+  const [selectedLang, setSelectaang] = useState(false);
+
+  const handleLangPress = (lang) => {
+    if (selectedLang === lang){
+      setSelectaang(null);
+    }else{
+      setSelectaang(lang);
+    }
+  }
+  
   return (
     <SafeAreaView className="bg-white">
       <View>
@@ -18,84 +42,33 @@ function ChangeLang() {
       </View>
       <View className="h-[80vh] flex flex-row items-center justify-center border-gray-200 border-b-2 border-2 rounded-lg ">
         <View className="flex-1 flex-row items-center justify-center flex-wrap py-3 px-2">
-          <View className="h-28 w-28 shadow-xl border-2 border-green-200 mx-2 my-2">
-            <TouchableOpacity className=" flex-1 justify-center items-center ">
-              <View className="text-center">
-                <Text className="text-green-500 font-bold text-xl">En</Text>
-                <Text>English</Text>
-              </View>
+        <TouchableOpacity onPress={() => handleLangPress('en')} className={`mx-2 my-2 w-24 h-24 rounded-lg  bg-${selectedLang === 'en' ? 'green' : 'transparent'}-500 border-green-500 border justify-center items-center`} >
+                <Text className={` font-bold text-xl text-${selectedLang === 'en' ? 'white' : 'black'}`}>En</Text>
+                <Text className={` text-${selectedLang === 'en' ? 'white' : 'black'}`}>English</Text>
             </TouchableOpacity>
-          </View>
-          <View className="h-28 w-28 shadow-xl border-2 border-green-200 mx-2 my-2">
-            <TouchableOpacity className=" flex-1 justify-center items-center ">
-              <View className="text-center">
-                <Text className="text-green-500 font-bold text-xl">En</Text>
-                <Text>English</Text>
-              </View>
+        <TouchableOpacity onPress={() => handleLangPress('mr')} className={`mx-2 my-2 w-24 h-24 rounded-lg  bg-${selectedLang === 'mr' ? 'green' : 'transparent'}-500 border-green-500 border justify-center items-center`} >
+                <Text className={` font-bold text-xl text-${selectedLang === 'mr' ? 'white' : 'black'}`}>Ma</Text>
+                <Text className={` text-${selectedLang === 'mr' ? 'white' : 'black'}`}>नमस्कार</Text>
             </TouchableOpacity>
-          </View>
-          <View className="h-28 w-28 shadow-xl border-2 border-green-200 mx-2 my-2">
-            <TouchableOpacity className=" flex-1 justify-center items-center ">
-              <View className="text-center">
-                <Text className="text-green-500 font-bold text-xl">En</Text>
-                <Text>English</Text>
-              </View>
+        <TouchableOpacity onPress={() => handleLangPress('hi')} className={`mx-2 my-2 w-24 h-24 rounded-lg  bg-${selectedLang === 'hi' ? 'green' : 'transparent'}-500 border-green-500 border justify-center items-center`} >
+                <Text className={` font-bold text-xl text-${selectedLang === 'hi' ? 'white' : 'black'}`}>Hi</Text>
+                <Text className={` text-${selectedLang === 'hi' ? 'white' : 'black'}`}>नमस्ते</Text>
             </TouchableOpacity>
-          </View>
-          <View className="h-28 w-28 shadow-xl border-2 border-green-200 mx-2 my-2">
-            <TouchableOpacity className=" flex-1 justify-center items-center ">
-              <View className="text-center">
-                <Text className="text-green-500 font-bold text-xl">En</Text>
-                <Text>English</Text>
-              </View>
+        <TouchableOpacity onPress={() => handleLangPress('gu')} className={`mx-2 my-2 w-24 h-24 rounded-lg  bg-${selectedLang === 'gu' ? 'green' : 'transparent'}-500 border-green-500 border justify-center items-center`} >
+                <Text className={` font-bold text-xl text-${selectedLang === 'gu' ? 'white' : 'black'}`}>Gu</Text>
+                <Text className={` text-${selectedLang === 'gu' ? 'white' : 'black'}`}>નમસ્તે</Text>
             </TouchableOpacity>
-          </View>
-          <View className="h-28 w-28 shadow-xl border-2 border-green-200 mx-2 my-2">
-            <TouchableOpacity className=" flex-1 justify-center items-center ">
-              <View className="text-center">
-                <Text className="text-green-500 font-bold text-xl">En</Text>
-                <Text>English</Text>
-              </View>
+        <TouchableOpacity onPress={() => handleLangPress('ta')} className={`mx-2 my-2 w-24 h-24 rounded-lg  bg-${selectedLang === 'ta' ? 'green' : 'transparent'}-500 border-green-500 border justify-center items-center`} >
+                <Text className={` font-bold text-xl text-${selectedLang === 'ta' ? 'white' : 'black'}`}>Ta</Text>
+                <Text className={` text-${selectedLang === 'ta' ? 'white' : 'black'}`}>வணக்கம்</Text>
             </TouchableOpacity>
-          </View>
-          <View className="h-28 w-28 shadow-xl border-2 border-green-200 mx-2 my-2">
-            <TouchableOpacity className=" flex-1 justify-center items-center ">
-              <View className="text-center">
-                <Text className="text-green-500 font-bold text-xl">En</Text>
-                <Text>English</Text>
-              </View>
+        <TouchableOpacity onPress={() => handleLangPress('te')} className={`mx-2 my-2 w-24 h-24 rounded-lg  bg-${selectedLang === 'te' ? 'green' : 'transparent'}-500 border-green-500 border justify-center items-center`} >
+                <Text className={` font-bold text-xl text-${selectedLang === 'te' ? 'white' : 'black'}`}>Te</Text>
+                <Text className={` text-${selectedLang === 'te' ? 'white' : 'black'}`}>హలో</Text>
             </TouchableOpacity>
-          </View>
-          <View className="h-28 w-28 shadow-xl border-2 border-green-200 mx-2 my-2">
-            <TouchableOpacity className=" flex-1 justify-center items-center ">
-              <View className="text-center">
-                <Text className="text-green-500 font-bold text-xl">En</Text>
-                <Text>English</Text>
-              </View>
-            </TouchableOpacity>
-          </View>
-          <View className="h-28 w-28 shadow-xl border-2 border-green-200 mx-2 my-2">
-            <TouchableOpacity className=" flex-1 justify-center items-center ">
-              <View className="text-center">
-                <Text className="text-green-500 font-bold text-xl">En</Text>
-                <Text>English</Text>
-              </View>
-            </TouchableOpacity>
-          </View>
-          <View className="h-28 w-28 shadow-xl border-2 border-green-200 mx-2 my-2">
-            <TouchableOpacity className=" flex-1 justify-center items-center ">
-              <View className="text-center">
-                <Text className="text-green-500 font-bold text-xl">En</Text>
-                <Text>English</Text>
-              </View>
-            </TouchableOpacity>
-          </View>
-          <View className="h-28 w-28 shadow-xl border-2 border-green-200 mx-2 my-2">
-            <TouchableOpacity className=" flex-1 justify-center items-center ">
-              <View className="text-center">
-                <Text className="text-green-500 font-bold text-xl">En</Text>
-                <Text>English</Text>
-              </View>
+        <TouchableOpacity onPress={() => handleLangPress('ml')} className={`mx-2 my-2 w-24 h-24 rounded-lg  bg-${selectedLang === 'ml' ? 'green' : 'transparent'}-500 border-green-500 border justify-center items-center`} >
+                <Text className={` font-bold text-xl text-${selectedLang === 'ml' ? 'white' : 'black'}`}>Ml</Text>
+                <Text className={` text-${selectedLang === 'ml' ? 'white' : 'black'}`}>ഹലോ</Text>
             </TouchableOpacity>
           </View>
         </View>
@@ -111,7 +84,6 @@ function ChangeLang() {
             </Text>
           </TouchableOpacity>
         </View>
-      </View>
       </View>
     </SafeAreaView>
   );
