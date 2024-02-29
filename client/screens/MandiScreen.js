@@ -18,7 +18,7 @@ function MandiScreen() {
   const [cropList, setCropList] = useState([
     {
       id: 1,
-      name: 'Carrot',
+      name: "Carrot",
       imgURI:
         "https://img.freepik.com/free-vector/healthy-orange-carrots-graphic-illustration_53876-8469.jpg?t=st=1708781899~exp=1708785499~hmac=5ef0cd8f666bc958a7bff8e070cf199979764a4403c1b811a9d90da02a0ee8bf&w=740",
     },
@@ -30,13 +30,13 @@ function MandiScreen() {
     },
     {
       id: 3,
-      name: 'Onion',
+      name: "Onion",
       imgURI:
         "https://img.freepik.com/free-photo/onion_144627-27528.jpg?t=st=1708783059~exp=1708786659~hmac=7a858e8054b6b077e3ef16ad0f7026408ec28071ac268364203367ed38f9e041&w=740",
     },
     {
       id: 4,
-      name: 'Carrot',
+      name: "Carrot",
       imgURI:
         "https://img.freepik.com/free-vector/healthy-orange-carrots-graphic-illustration_53876-8469.jpg?t=st=1708781899~exp=1708785499~hmac=5ef0cd8f666bc958a7bff8e070cf199979764a4403c1b811a9d90da02a0ee8bf&w=740",
     },
@@ -48,7 +48,7 @@ function MandiScreen() {
     },
     {
       id: 6,
-      name: 'Carrot',
+      name: "Carrot",
       imgURI:
         "https://img.freepik.com/free-vector/healthy-orange-carrots-graphic-illustration_53876-8469.jpg?t=st=1708781899~exp=1708785499~hmac=5ef0cd8f666bc958a7bff8e070cf199979764a4403c1b811a9d90da02a0ee8bf&w=740",
     },
@@ -96,69 +96,97 @@ function MandiScreen() {
       screenName: "PimpriScreen",
     },
   ]);
-  
+
   const [pinnedItems, setPinnedItems] = useState([]);
 
   const [sortBy, setSortBy] = useState(null);
 
-  const [selectCrop, setSelectCrop] = useState(false);
+  const [selectedCrop, setSelectedCrop] = useState(null);
 
-  const handlePress = () => {
-    setSelectCrop(!selectCrop);
-  }
+  const handleSelectCrop = (crop) => {
+    setSelectedCrop(crop);
+  };
 
   const renderCrop = ({ item }) => (
-    <TouchableOpacity onPress={handlePress} className="w-24 h-24 flex flex-col justify-center items-center ">
-      <Image
-        source={{
-          uri: item.imgURI,
-        }}
-        className="h-14 w-14"
-      ></Image>
-      <Text>{item.name}</Text>
+    <TouchableOpacity
+      onPress={() => handleSelectCrop(item)}
+      className={`px-3 py-2  ${
+        selectedCrop && selectedCrop.id === item.id
+          ? "bg-green-200"
+          : "bg-transparent"
+      }`}
+    >
+      <View className="items-center">
+        <Image
+          source={{ uri: item.imgURI }}
+          className="w-16 h-16 rounded-full"
+        />
+        <Text>{item.name}</Text>
+      </View>
     </TouchableOpacity>
   );
 
   const handleListItemPress = (screenName, itemId) => {
-    navigation.navigate(screenName, {itemId: itemId})
-  }
+    navigation.navigate(screenName, { itemId: itemId });
+  };
 
   const renderItem = ({ item }) => (
-    <TouchableOpacity onPress={() => (handleListItemPress(item.screenName,item.id))}>
-    <View className="border-b-2 border-gray-200 pb-3">
-      <View className=" flex flex-row justify-between">
-        <View className="pl-4 pt-2">
-          <Text className="text-xl font-semibold">{item.name}</Text>
-          <Text className="text-base text-gray-600 pb-4">{item.distance}</Text>
-          <TouchableOpacity 
-            className="bg-green-500 w-20 h-8 flex justify-center items-center"
-            onPress={() => handlePinItem(item)}
-          >
-            <Text className=" text-lg font-semibold text-white">Follow</Text>
-          </TouchableOpacity>
-        </View>
-        <View className="pr-4 pt-2">
-          <Text className="text-xl font-semibold">
-            {item.priceTodayWithData}
-          </Text>
-          <Text className="text-base text-gray-600 pb-4">
-            {item.priceRange}
-          </Text>
-          <TouchableOpacity className="w-32 h-8 flex justify-center items-center">
-            <Text className=" text-lg font-semibold text-green-500">
-              Previous Price
+    <TouchableOpacity
+      onPress={() => handleListItemPress(item.screenName, item.id)}
+    >
+      <View className="border-b-2 border-gray-200 pb-3">
+        <View className="flex flex-row justify-between">
+          <View className="pl-4 pt-2">
+            <Text className="text-xl font-semibold">{item.name}</Text>
+            <Text className="text-base text-gray-600 pb-4">
+              {item.distance}
             </Text>
-          </TouchableOpacity>
+            <TouchableOpacity
+              className={`bg-${
+                pinnedItems.some((pinnedItem) => pinnedItem.id === item.id)
+                  ? "gray"
+                  : "green"
+              }-500 w-20 h-8 flex justify-center items-center`}
+              onPress={() => handlePinItem(item)}
+            >
+              <Text className="text-lg font-semibold text-white">
+                {pinnedItems.some((pinnedItem) => pinnedItem.id === item.id)
+                  ? "Unfollow"
+                  : "Follow"}
+              </Text>
+            </TouchableOpacity>
+          </View>
+          <View className="pr-4 pt-2">
+            <Text className="text-xl font-semibold">
+              {item.priceTodayWithData}
+            </Text>
+            <Text className="text-base text-gray-600 pb-4">
+              {item.priceRange}
+            </Text>
+            <TouchableOpacity className="w-32 h-8 flex justify-center items-center">
+              <Text className="text-lg font-semibold text-green-500">
+                Previous Price
+              </Text>
+            </TouchableOpacity>
+          </View>
         </View>
       </View>
-    </View>
     </TouchableOpacity>
   );
 
   const handlePinItem = (item) => {
+    const index = pinnedItems.findIndex(
+      (pinnedItem) => pinnedItem.id === item.id
+    );
+    if (index === -1) {
       setPinnedItems([item, ...pinnedItems]);
+    } else {
+      const updatedPinnedItems = [...pinnedItems];
+      updatedPinnedItems.splice(index, 1);
+      setPinnedItems(updatedPinnedItems);
+    }
   };
-  
+
   const sortByDistance = () => {
     const sortedMarketNearby = [...marketNearby].sort((a, b) => {
       const distanceA = parseFloat(a.distance);
@@ -166,20 +194,18 @@ function MandiScreen() {
       return distanceA - distanceB;
     });
     setMarketNearby(sortedMarketNearby);
-    setSortBy('distance');    
+    setSortBy("distance");
   };
 
   const sortByPrice = () => {
     const sortedMarketNearby = [...marketNearby].sort((a, b) => {
-      const priceA = parseFloat(a.priceTodayWithData.split(' - ')[0]);
-      const priceB = parseFloat(b.priceTodayWithData.split(' - ')[0]);
+      const priceA = parseFloat(a.priceTodayWithData.split(" - ")[0]);
+      const priceB = parseFloat(b.priceTodayWithData.split(" - ")[0]);
       return priceA - priceB;
     });
     setMarketNearby(sortedMarketNearby);
-    setSortBy('price');
+    setSortBy("price");
   };
-
-
 
   return (
     <SafeAreaView className="bg-white">
@@ -191,7 +217,7 @@ function MandiScreen() {
           </Text>
         </View>
       </View>
-      <View className="px-2 py-2">
+      <View className="px-2">
         <View className=" flex flex-row justify-between">
           <FlatList
             data={cropList}
@@ -200,21 +226,27 @@ function MandiScreen() {
             horizontal
             showsHorizontalScrollIndicator={false}
           />
-          <View className="w-24 h-24 flex flex-col justify-center items-center border-l-2 border-gray-200 ">
-            <TouchableOpacity className="bg-green-500 w-10 h-10 rounded-full flex flex-row justify-center items-center">
-              <Ionicons name="add" color={"#fff"} size={30} />
-            </TouchableOpacity>
-            <Text className=" text-xs pt-1 text-center">Add/Remove crop</Text>
-          </View>
+          <TouchableOpacity
+            onPress={() => navigation.navigate("ManageCropScreen")}
+          >
+            <View className="w-24 h-24 flex flex-col justify-center items-center border-l-2 border-gray-200 ">
+              <TouchableOpacity onPress={() => navigation.navigate("ManageCropScreen")} className="bg-green-500 w-10 h-10 rounded-full flex flex-row justify-center items-center">
+                <Ionicons name="add" color={"#fff"} size={30} />
+              </TouchableOpacity>
+              <Text className=" text-xs pt-1 text-center">Add/Remove crop</Text>
+            </View>
+          </TouchableOpacity>
         </View>
       </View>
       <View className="py-1 bg-gray-200"></View>
-      <View className=" max-h-[68vh]">
-      <FlatList
-        data={pinnedItems}
-        renderItem={renderItem}
-        keyExtractor={(item) => item.id.toString()}
-      />
+      <View className=" max-h-[69vh]">
+        <View className={`h-${pinnedItems.length * 36}`}>
+          <FlatList
+            data={pinnedItems}
+            renderItem={renderItem}
+            keyExtractor={(item) => item.id.toString()}
+          />
+        </View>
         <View className="mx-4 my-4 p-2 items-center bg-gray-200 rounded-full">
           <TextInput
             placeholder="Search"
@@ -229,19 +261,35 @@ function MandiScreen() {
         </View>
         <View className="flex flex-row justify-evenly border-b-2 h-14 border-gray-200">
           <View className="px-2 py-2">
-          <TouchableOpacity 
-              className={`h-8 flex items-center justify-center rounded-full w-44 border-2 border-gray-300 bg-${sortBy === 'distance' ? 'green' : 'slate'}-500`}
+            <TouchableOpacity
+              className={`h-8 flex items-center justify-center rounded-full w-44 border-2 border-gray-300 bg-${
+                sortBy === "distance" ? "green" : "slate"
+              }-500`}
               onPress={sortByDistance}
             >
-              <Text className={`font-medium text-sm text-${sortBy === 'distance' ? 'white' : 'black'}`}>Sort by Distance</Text>
+              <Text
+                className={`font-medium text-sm text-${
+                  sortBy === "distance" ? "white" : "black"
+                }`}
+              >
+                Sort by Distance
+              </Text>
             </TouchableOpacity>
           </View>
           <View className="px-2 py-2">
-          <TouchableOpacity 
-              className={`h-8 flex items-center justify-center rounded-full w-40 border-2 border-gray-300 bg-${sortBy === 'price' ? 'green' : 'slate'}-500`}
+            <TouchableOpacity
+              className={`h-8 flex items-center justify-center rounded-full w-40 border-2 border-gray-300 bg-${
+                sortBy === "price" ? "green" : "slate"
+              }-500`}
               onPress={sortByPrice}
             >
-              <Text className={`font-medium text-sm text-${sortBy === 'price' ? 'white' : 'black'}`}>Sort by Price</Text>
+              <Text
+                className={`font-medium text-sm text-${
+                  sortBy === "price" ? "white" : "black"
+                }`}
+              >
+                Sort by Price
+              </Text>
             </TouchableOpacity>
           </View>
         </View>

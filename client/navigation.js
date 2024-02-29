@@ -17,6 +17,7 @@ import WeatherScreen from './AdditionalScreens/WeatherScreen';
 import SettingsScreen from './AdditionalScreens/SettingsScreen';
 import InviteFriendScreen from './AdditionalScreens/InviteFriendScreen';
 import MyOrders from './AdditionalScreens/MyOrders';
+import ManageCrops from './AdditionalScreens/ManageCrops';
 import ChangeLanguageScreen from './AdditionalScreens/ChangeLangScreen';
 import JunnarScreen from './MerchantScreens/JunnarScreen';
 import KhedScreen from './MerchantScreens/KhedScreen';
@@ -50,6 +51,7 @@ export default function Navigation(){
           <Stack.Screen name="InviteFriendScreen" component={InviteFriendScreen} />
           <Stack.Screen name="MyOrderScreen" component={MyOrders} />
           <Stack.Screen name="ChangeLanguageScreen2" component={ChangeLanguageScreen} />
+          <Stack.Screen name='ManageCropScreen' component={ManageCrops} />
 
           {/* Merchant Screens */}
           <Stack.Screen name="JunnarScreen" component={JunnarScreen} />

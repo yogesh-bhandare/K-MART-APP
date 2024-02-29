@@ -29,7 +29,7 @@ function FirstScreen() {
                     <Text className="text-l font-medium mb-1">For Agri retailers and Agri consultants</Text>
                 </View>
                 <View>
-                    <Image source={""} className="h-6" />
+                    {/* <Image source={""} className="h-6" /> */}
                 </View>
             </TouchableOpacity>
             <TouchableOpacity onPress={() => navigation.navigate('VerifyNumScreen')} className=" shadow-md border-solid border-green-300 border-2 flex-1 flex-row justify-between rounded-md bg-white px-2 mb-2 m-4">
@@ -38,7 +38,7 @@ function FirstScreen() {
                     <Text className="text-l font-medium mb-1">For each and every farmer</Text>
                 </View>
                 <View>
-                    <Image source={""} className="h-6" />
+                    {/* <Image source={""} className="h-6" /> */}
                 </View>
             </TouchableOpacity>
             <TouchableOpacity onPress={() => navigation.navigate('VerifyNumScreen')} className=" shadow-md border-solid border-green-300 border-2 flex-1 flex-row justify-between rounded-md bg-white px-2 mb-2 m-4">
@@ -47,7 +47,7 @@ function FirstScreen() {
                     <Text className="text-l font-medium mb-1">For Traders, Market agents and others</Text>
                 </View>
                 <View>
-                    <Image source={""} className="h-6" />
+                    {/* <Image source={""} className="h-6" /> */}
                 </View>
             </TouchableOpacity>
         </View>
