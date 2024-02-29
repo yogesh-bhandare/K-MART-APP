@@ -47,7 +47,7 @@ function ChangeLang() {
                 <Text className={` text-${selectedLang === 'en' ? 'white' : 'black'}`}>English</Text>
             </TouchableOpacity>
         <TouchableOpacity onPress={() => handleLangPress('mr')} className={`mx-2 my-2 w-24 h-24 rounded-lg  bg-${selectedLang === 'mr' ? 'green' : 'transparent'}-500 border-green-500 border justify-center items-center`} >
-                <Text className={` font-bold text-xl text-${selectedLang === 'mr' ? 'white' : 'black'}`}>Ma</Text>
+                <Text className={` font-bold text-xl text-${selectedLang === 'mr' ? 'white' : 'black'}`}>Mr</Text>
                 <Text className={` text-${selectedLang === 'mr' ? 'white' : 'black'}`}>नमस्कार</Text>
             </TouchableOpacity>
         <TouchableOpacity onPress={() => handleLangPress('hi')} className={`mx-2 my-2 w-24 h-24 rounded-lg  bg-${selectedLang === 'hi' ? 'green' : 'transparent'}-500 border-green-500 border justify-center items-center`} >
