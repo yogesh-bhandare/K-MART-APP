@@ -94,6 +94,8 @@ function MandiScreen() {
   
   const [pinnedItems, setPinnedItems] = useState([]);
 
+  const [sortBy, setSortBy] = useState(null);
+
   const renderCrop = ({ item }) => (
     <View className="w-24 h-24 flex flex-col justify-center items-center ">
       <Image
@@ -139,9 +141,27 @@ function MandiScreen() {
   const handlePinItem = (item) => {
       setPinnedItems([item, ...pinnedItems]);
   };
-
-
   
+  const sortByDistance = () => {
+    const sortedMarketNearby = [...marketNearby].sort((a, b) => {
+      const distanceA = parseFloat(a.distance);
+      const distanceB = parseFloat(b.distance);
+      return distanceA - distanceB;
+    });
+    setMarketNearby(sortedMarketNearby);
+    setSortBy('distance');    
+  };
+
+  const sortByPrice = () => {
+    const sortedMarketNearby = [...marketNearby].sort((a, b) => {
+      const priceA = parseFloat(a.priceTodayWithData.split(' - ')[0]);
+      const priceB = parseFloat(b.priceTodayWithData.split(' - ')[0]);
+      return priceA - priceB;
+    });
+    setMarketNearby(sortedMarketNearby);
+    setSortBy('price');
+  };
+
   return (
     <SafeAreaView className="bg-white">
       <View className=" px-4 py-4 border-gray-200 border-b-2">
@@ -190,13 +210,19 @@ function MandiScreen() {
         </View>
         <View className="flex flex-row justify-evenly border-b-2 h-14 border-gray-200">
           <View className="px-2 py-2">
-            <TouchableOpacity className="h-8 lex items-center justify-center rounded-full w-44 bg-slate-200 border-2 border-gray-300">
-              <Text className="font-medium text-sm ">Sort by Distance</Text>
+          <TouchableOpacity 
+              className={`h-8 flex items-center justify-center rounded-full w-44 border-2 border-gray-300 bg-${sortBy === 'distance' ? 'green' : 'slate'}-500`}
+              onPress={sortByDistance}
+            >
+              <Text className={`font-medium text-sm text-${sortBy === 'distance' ? 'white' : 'black'}`}>Sort by Distance</Text>
             </TouchableOpacity>
           </View>
           <View className="px-2 py-2">
-            <TouchableOpacity className="h-8 lex items-center justify-center rounded-full w-40 bg-slate-200 border-2 border-gray-300">
-              <Text className="font-medium text-sm">Sort by Price</Text>
+          <TouchableOpacity 
+              className={`h-8 flex items-center justify-center rounded-full w-40 border-2 border-gray-300 bg-${sortBy === 'price' ? 'green' : 'slate'}-500`}
+              onPress={sortByPrice}
+            >
+              <Text className={`font-medium text-sm text-${sortBy === 'price' ? 'white' : 'black'}`}>Sort by Price</Text>
             </TouchableOpacity>
           </View>
         </View>
