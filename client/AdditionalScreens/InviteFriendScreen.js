@@ -1,4 +1,4 @@
-import { View, Text, TouchableOpacity, Image } from "react-native";
+import { View, Text, TouchableOpacity, Share } from "react-native";
 import React from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useNavigation } from "@react-navigation/native";
@@ -7,6 +7,29 @@ import Footer from "../components/Footer";
 
 const InviteFriendScreen = () => {
   const navigation = useNavigation();
+
+  const handleInviteFriends = async () => {
+    try {
+      const result = await Share.share({
+        message: 'Join me on K-Mart! Download the app from https://github.com/gityb8/K-MART-APP',
+      });
+      if (result.action === Share.sharedAction) {
+        if (result.activityType) {
+          // Shared successfully
+          console.log('Shared successfully');
+        } else {
+          // Shared
+          console.log('Shared');
+        }
+      } else if (result.action === Share.dismissedAction) {
+        // Dismissed
+        console.log('Dismissed');
+      }
+    } catch (error) {
+      alert(error.message);
+    }
+  };
+
   return (
     <SafeAreaView>
       <View className="bg-white h-[91%]">
@@ -16,18 +39,18 @@ const InviteFriendScreen = () => {
           </TouchableOpacity>
           <Text className=" text-sm text-gray-600">Invite Friends</Text>
         </View>
-        <View className=" h-[84vh]" >
+        <View className=" h-[84vh]">
           <View className="flex-1 flex-col items-center justify-center">
             <View className="h-20 w-20 rounded-full bg-green-300">
               {/* <Image source={{uri: ''}}></Image> */}
             </View>
-            <Text>Invite friends to FarmRise</Text>
+            <Text>Invite friends to K-Mart</Text>
             <View>
               <Text>It's always too much fun with a friend around</Text>
             </View>
             <View className="p-2 w-full ">
               <TouchableOpacity
-                onPress={() => navigation.navigate("HomeScreen")}
+                onPress={handleInviteFriends}
                 className=" h-14 rounded-lg bg-green-500 flex justify-center items-center"
               >
                 <Text className="text-center text-lg font-semibold text-white">
