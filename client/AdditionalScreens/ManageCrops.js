@@ -52,7 +52,9 @@ const ManageCrops = () => {
 
   const handleCropSelection = (crop) => {
     if (selectedCrops.includes(crop)) {
-      setSelectedCrops(selectedCrops.filter((selectedCrop) => selectedCrop !== crop));
+      setSelectedCrops(
+        selectedCrops.filter((selectedCrop) => selectedCrop !== crop)
+      );
     } else {
       setSelectedCrops([...selectedCrops, crop]);
     }
@@ -60,8 +62,15 @@ const ManageCrops = () => {
 
   const renderCropItem = ({ item }) => (
     <TouchableOpacity onPress={() => handleCropSelection(item)}>
-      <View className={`flex items-center border m-1 p-2 rounded-md ${selectedCrops.includes(item) ? 'border-green-500' : 'border-gray-200'}`}>
-        <Image source={{ uri: item.imgURI }} className="rounded-full h-20 w-20" />
+      <View
+        className={`flex items-center border m-1 p-2 rounded-md ${
+          selectedCrops.includes(item) ? "border-green-500" : "border-gray-200"
+        }`}
+      >
+        <Image
+          source={{ uri: item.imgURI }}
+          className="rounded-full h-20 w-20"
+        />
         <Text className="text-center">{item.name}</Text>
       </View>
     </TouchableOpacity>
@@ -76,16 +85,33 @@ const ManageCrops = () => {
           </TouchableOpacity>
           <Text className=" text-sm text-gray-600">Manage Crops</Text>
         </View>
-        <View className="w-[70%] mx-4 border-gray-200 border-b-2 py-2">
-          <Text className="text-xl font-semibold">Pick the crops you are interested in</Text>
+        <View className="border-b border-gray-200">
+        <View className="w-[70%] mx-4 py-2">
+          <Text className="text-xl font-semibold">
+            Pick the crops you are interested in
+          </Text>
         </View>
-        <View className="flex items-center flex-wrap">
+        </View>
+        <View className="flex flex-row items-center flex-wrap m-1 px-4">
           {selectedCrops.map((crop) => (
-            <View key={crop.id} className="bg-green-500 text-white m-1 p-2 rounded-md">
-              <Text>{crop.name}</Text>
-              <TouchableOpacity onPress={() => handleCropSelection(crop)}>
-                <Ionicons name="close-circle" size={16} color="white" />
+            <View className=""> 
+            <View
+              key={crop.id}
+              className="bg-green-500 text-white border border-green-200 m-1 px-2 rounded-md"
+            >
+              <TouchableOpacity>
+                <View className={`flex items-center m-1 p-2 rounded-md`}>
+                  <Image
+                    source={{ uri: crop.imgURI }}
+                    className="rounded-full h-16 w-16"
+                  />
+                  <Text className="text-center text-white">{crop.name}</Text>
+                  <TouchableOpacity onPress={() => handleCropSelection(crop)}>
+                    <Ionicons name="close-circle" size={24} color="white" />
+                  </TouchableOpacity>
+                </View>
               </TouchableOpacity>
+            </View>
             </View>
           ))}
         </View>
