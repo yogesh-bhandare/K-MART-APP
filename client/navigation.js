@@ -9,6 +9,7 @@ import VerifyOTP from './screens/VerifyOTP';
 import MandiScreen from './screens/MandiScreen';
 import ChangeLang from './screens/ChangeLang';
 import MoreScreen from './screens/MoreScreen';
+import SelectScreen from './screens/SelectCrops';
 import ManageFinancesScreen from './screens/ManageFinancesScreen';
 import ProfileScreen from './screens/ProfileScreen';
 import ChangeLocation from './AdditionalScreens/ChangeLocation';
@@ -43,6 +44,7 @@ export default function Navigation(){
           <Stack.Screen name="ProfileScreen" component={ProfileScreen} />
           <Stack.Screen name="SearchScreen" component={Search} />
           <Stack.Screen name="SettingScreen" component={SettingsScreen} />
+          <Stack.Screen name="SelectCropScreen" component={SelectScreen} />
 
           {/* Additonal Screens */}
           <Stack.Screen name="LocationScreen" component={ChangeLocation} />

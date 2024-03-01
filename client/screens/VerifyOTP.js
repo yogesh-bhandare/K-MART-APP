@@ -19,7 +19,7 @@ function VerifyOTP() {
     if (verifyOTP.length === 6) {
       const hardcodedOTP = '123456'; 
       if (verifyOTP === hardcodedOTP) {
-        navigation.navigate('HomeScreen');
+        navigation.navigate('SelectCropScreen');
       } else {
         alert('Invalid OTP. Please enter the correct OTP.');
       }
