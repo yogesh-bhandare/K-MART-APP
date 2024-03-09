@@ -16,9 +16,9 @@ const Footer = () => {
           <Ionicons name="stats-chart-outline" size={30} />
           <Text className="text-xs">Mandi</Text>
         </TouchableOpacity>
-        <TouchableOpacity className="flex items-center" onPress={() => navigation.navigate("FinacesScreen")}>
-          <Ionicons name="map-outline" size={30} />
-          <Text className="text-xs">Finance</Text>
+        <TouchableOpacity className="flex items-center" onPress={() => navigation.navigate("CropDoctorHome")}>
+          <Ionicons name="camera-outline" size={30} />
+          <Text className="text-xs">Crop Doctor</Text>
         </TouchableOpacity>
         <TouchableOpacity className="flex items-center" onPress={() => navigation.navigate("MoreScreen")}>
           <Ionicons name="reorder-four" size={30} />

@@ -10,7 +10,7 @@ import MandiScreen from './screens/MandiScreen';
 import ChangeLang from './screens/ChangeLang';
 import MoreScreen from './screens/MoreScreen';
 import SelectScreen from './screens/SelectCrops';
-import ManageFinancesScreen from './screens/ManageFinancesScreen';
+import CropDoctorHomeScreen from './screens/CropDoctorHomeScreen';
 import ProfileScreen from './screens/ProfileScreen';
 import ChangeLocation from './AdditionalScreens/ChangeLocation';
 import CropDoctorScreen from './AdditionalScreens/CropDoctorScreen';
@@ -39,7 +39,7 @@ export default function Navigation(){
           <Stack.Screen name="VerifyOTPScreen" component={VerifyOTP} />
           <Stack.Screen name="HomeScreen" component={HomeScreen} />
           <Stack.Screen name="MandiScreen" component={MandiScreen} />
-          <Stack.Screen name="FinacesScreen" component={ManageFinancesScreen} />
+          <Stack.Screen name="CropDoctorHome" component={CropDoctorHomeScreen} />
           <Stack.Screen name="MoreScreen" component={MoreScreen} />
           <Stack.Screen name="ProfileScreen" component={ProfileScreen} />
           <Stack.Screen name="SearchScreen" component={Search} />
