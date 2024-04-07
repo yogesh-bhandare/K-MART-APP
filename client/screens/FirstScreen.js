@@ -7,6 +7,30 @@ import Ionicons from "@expo/vector-icons/Ionicons";
 
 function FirstScreen() {
   const navigation = useNavigation();
+
+  const handleLanguageSelection = (language) => {
+    setSelectedLanguage(language);
+  };
+
+  const sendSelectionToBackend = async () => {
+    try {
+      const response = await fetch('http://192.168.211.7:8000/user_type/', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ language: selectedLanguage }),
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to send selection to backend');
+      }
+
+    } catch (error) {
+      console.error('Error sending selection to backend:', error);
+    }
+  };
+
   return (
     <SafeAreaView className="bg-white h-full">
         <View className=" px-4 py-4 border-gray-200 border-b-2">
@@ -24,7 +48,7 @@ function FirstScreen() {
         </View>
         <View className="flex-1 flex-col justify-center max-h-96 ">
             <TouchableOpacity onPress={() => navigation.navigate('VerifyNumScreen')} className=" shadow-md border-solid border-green-300 border-2 flex-1 flex-row justify-between rounded-md bg-white px-2 mb-2 m-4">
-                <View className="flex-1 flex-col justify-center">
+                <View  className="flex-1 flex-col justify-center">
                     <Text className="text-xl font-medium mb-1">Agri Input Retailing</Text>
                     <Text className="text-l font-medium mb-1">For Agri retailers and Agri consultants</Text>
                 </View>
@@ -33,7 +57,7 @@ function FirstScreen() {
                 </View>
             </TouchableOpacity>
             <TouchableOpacity onPress={() => navigation.navigate('VerifyNumScreen')} className=" shadow-md border-solid border-green-300 border-2 flex-1 flex-row justify-between rounded-md bg-white px-2 mb-2 m-4">
-                <View className="flex-1 flex-col justify-center">
+                <View onPress={() => handleLanguageSelection('Farming')} className="flex-1 flex-col justify-center">
                     <Text className="text-xl font-medium mb-1">Farming</Text>
                     <Text className="text-l font-medium mb-1">For each and every farmer</Text>
                 </View>
@@ -42,7 +66,7 @@ function FirstScreen() {
                 </View>
             </TouchableOpacity>
             <TouchableOpacity onPress={() => navigation.navigate('VerifyNumScreen')} className=" shadow-md border-solid border-green-300 border-2 flex-1 flex-row justify-between rounded-md bg-white px-2 mb-2 m-4">
-                <View className="flex-1 flex-col justify-center">
+                <View onPress={() => handleLanguageSelection('Trader')} className="flex-1 flex-col justify-center">
                     <Text className="text-xl font-medium mb-1">Agri Trading</Text>
                     <Text className="text-l font-medium mb-1">For Traders, Market agents and others</Text>
                 </View>
