@@ -20,7 +20,7 @@ const CompleteProfile = () => {
               }}
             />
             <View>
-            <Text className="text-base px-3">Want to unlock personalized app experience?</Text>
+            <Text className="text-base font-light px-3">Want to unlock personalized app experience?</Text>
             <Text className=" text-base text-green-600 px-3 font-semibold ">Complete your Profile now</Text>
             </View>
           </View>

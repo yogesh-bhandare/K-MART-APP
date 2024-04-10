@@ -33,7 +33,7 @@ function VerifyMobile() {
 
   const handleSubmit = async () => {
     try {
-      const response = await fetch('http://192.168.108.7:8000/phone_number/', {
+      const response = await fetch('http://192.168.43.249:8000/phone_number/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

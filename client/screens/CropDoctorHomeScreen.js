@@ -50,7 +50,7 @@ const CropDoctorHomeScreen = () => {
     <SafeAreaView>
       <View className="bg-white h-[91%]">
       <View className="h-14 px-4 py-2 flex flex-row items-center border-gray-200 border-b-2">
-        <Text className=" text-sm text-gray-600">Crop Doctor</Text>
+        <Text className=" text-lg font-semibold">Crop Doctor</Text>
       </View>
         <View className=" h-40 bg-green-300 px-4 py-2 flex-row justify-between items-center">
           <View className="w-[60%]">
@@ -77,7 +77,7 @@ const CropDoctorHomeScreen = () => {
           </View>
         </View>
         <View className="h-14 px-4 py-2 flex justify-center">
-          <Text className="font-semibold">My Queries</Text>
+          <Text className="font-semibold text-lg">My Queries</Text>
         </View>
         <View className="h-44 px-6 text-center bg-gray-200 flex justify-center items-center">
           <Text className="font-semibold text-xs">No crop problem yet</Text>
