@@ -25,6 +25,7 @@ import KhedScreen from './MerchantScreens/KhedScreen';
 import PimpriScreen from './MerchantScreens/PimpriScreen';
 import SataraScreen from './MerchantScreens/SataraScreen';
 import WaiScreen from './MerchantScreens/WaiScreen';
+import CompleteProfile from './components/CompleteProfile';
 const Stack = createNativeStackNavigator();
 
 export default function Navigation(){
@@ -54,6 +55,7 @@ export default function Navigation(){
           <Stack.Screen name="MyOrderScreen" component={MyOrders} />
           <Stack.Screen name="ChangeLanguageScreen2" component={ChangeLanguageScreen} />
           <Stack.Screen name='ManageCropScreen' component={ManageCrops} />
+          <Stack.Screen name='CompleteProfile' component={CompleteProfile} />
 
           {/* Merchant Screens */}
           <Stack.Screen name="JunnarScreen" component={JunnarScreen} />

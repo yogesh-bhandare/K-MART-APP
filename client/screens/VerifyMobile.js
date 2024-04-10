@@ -1,22 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { View, Text, TextInput, TouchableOpacity, Alert } from "react-native"; // Import Alert
 import { useNavigation } from "@react-navigation/native";
 import Ionicons from "@expo/vector-icons/Ionicons";
 import * as Yup from "yup";
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import * as Location from "expo-location";
 
 function VerifyMobile() {
   const navigation = useNavigation();
 
-  const NumberLength = Yup.object().shape({
-    NumberLength: Yup.number()
-      .min(10, "Invalid Number")
-      .max(10, "Invalid Number")
-      .required("Enter Phone Number"),
-  });
   const [locationPermission, setLocationPermission] = useState(false);
+  const [phoneNumber, setPhoneNumber] = useState("");
 
   useEffect(() => {
     requestLocationPermission();
@@ -31,29 +26,34 @@ function VerifyMobile() {
     }
   };
 
-  const [phoneNumber, setPhoneNumber] = useState("");
-
   const handlePhoneNumberChange = (value) => {
     const formattedValue = value.replace(/\D/g, "");
     setPhoneNumber(formattedValue);
   };
 
-  const handleSubmit = () => {
-    if (phoneNumber.length === 10) {
-      if (!locationPermission) {
-        Alert.alert(
-          'Location Permission Required',
-          'Please grant location permission to proceed.',
-          [{ text: 'OK', onPress: () => requestLocationPermission() }],
-        );
-      } else {
-        navigation.navigate('VerifyOTPScreen', { phoneNumber });
+  const handleSubmit = async () => {
+    try {
+      const response = await fetch('http://192.168.108.7:8000/phone_number/', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ phone_number: phoneNumber }),
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to send data to backend');
       }
-    } else {
-      alert('Phone number must be 10 digits long.');
+
+      navigation.navigate('VerifyOTPScreen', { phoneNumber });
+    } catch (error) {
+      console.error('Error sending data to backend:', error);
+      Alert.alert(
+        'Error',
+        'Failed to send data to backend. Please try again later.',
+      );
     }
   };
-  
 
   return (
     <SafeAreaView className="bg-white">
