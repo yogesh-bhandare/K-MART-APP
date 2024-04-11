@@ -16,19 +16,19 @@ const NewsComponent = () => {
               <Image
                 className="h-20 w-36 rounded-sm"
                 source={{
-                  uri: "https://img.freepik.com/free-photo/image-wheat-field-with-blue-sky_661209-305.jpg?t=st=1712774045~exp=1712777645~hmac=f0f1d4809bd9dd00d40087281c1feb8c60f7426de520b05dbdb9f694291f9abc&w=1060",
+                  uri: "https://www.agriculture.com/thmb/EMLbN_R04158Uz6KAjTao58-5Vk=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/MayWheatRainDrops-1-731120a608ab4b9c8576aeff53d5ff5f.jpg",
                 }}
               />
-              <Text className="py-2 px-2 w-[55%]">Wheat is the dominant crop in temperate countries being used for human food and livestock feed.</Text>
+              <Text className="py-2 px-2 w-[55%]">Over half the 2024 winter wheat crop rated good/excellent condition.</Text>
             </View>
             <View className=" py-1  flex flex-row items-center justify-center ">
               <Image
                 className="h-20 w-36 rounded-sm"
                 source={{
-                  uri: "https://img.freepik.com/free-photo/image-wheat-field-with-blue-sky_661209-305.jpg?t=st=1712774045~exp=1712777645~hmac=f0f1d4809bd9dd00d40087281c1feb8c60f7426de520b05dbdb9f694291f9abc&w=1060",
+                  uri: "https://www.agriculture.com/thmb/f4B3lV4ciQJmz1HvfCGgMoc_nYA=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Temple-Rhodes-IMG_07201-ccdbb7d2dfd74570bec0890a30c08412.jpg",
                 }}
               />
-              <Text className="py-2 px-2 w-[55%]">Wheat is the dominant crop in temperate countries being used for human food and livestock feed.</Text>
+              <Text className="py-2 px-2 w-[55%]">Wet start to spring keeps farmers out of field </Text>
             </View>
             </View>
 

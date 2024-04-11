@@ -16,19 +16,19 @@ const GovtSchemeComponent = () => {
               <Image
                 className="h-20 w-36 rounded-sm"
                 source={{
-                  uri: "https://img.freepik.com/free-photo/image-wheat-field-with-blue-sky_661209-305.jpg?t=st=1712774045~exp=1712777645~hmac=f0f1d4809bd9dd00d40087281c1feb8c60f7426de520b05dbdb9f694291f9abc&w=1060",
+                  uri: "https://images.unsplash.com/photo-1520052203542-d3095f1b6cf0?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8aW5kaWFuJTIwZmFybWVyfGVufDB8fDB8fHww",
                 }}
               />
-              <Text className="py-2 px-2 w-[55%]">Wheat is the dominant crop in temperate countries being used for human food and livestock feed.</Text>
+              <Text className="py-2 px-2 w-[55%]">Pradhan Mantri Fasal Bima Yojana (PMFBY).</Text>
             </View>
             <View className=" py-1  flex flex-row items-center justify-center ">
               <Image
                 className="h-20 w-36 rounded-sm"
                 source={{
-                  uri: "https://img.freepik.com/free-photo/image-wheat-field-with-blue-sky_661209-305.jpg?t=st=1712774045~exp=1712777645~hmac=f0f1d4809bd9dd00d40087281c1feb8c60f7426de520b05dbdb9f694291f9abc&w=1060",
+                  uri: "https://plus.unsplash.com/premium_photo-1682092055821-6f31d8edb895?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
                 }}
               />
-              <Text className="py-2 px-2 w-[55%]">Wheat is the dominant crop in temperate countries being used for human food and livestock feed.</Text>
+              <Text className="py-2 px-2 w-[55%]">Modified Interest Subvention Scheme (MISS).</Text>
             </View>
             </View>
 

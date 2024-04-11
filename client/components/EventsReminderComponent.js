@@ -16,7 +16,7 @@ const EventsReminderComponent = () => {
             <Image
               className="h-20 w-36 rounded-sm"
               source={{
-                uri: "https://img.freepik.com/free-photo/image-wheat-field-with-blue-sky_661209-305.jpg?t=st=1712774045~exp=1712777645~hmac=f0f1d4809bd9dd00d40087281c1feb8c60f7426de520b05dbdb9f694291f9abc&w=1060",
+                uri: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRX3n6ag4K-xg7BVj42zawCsIpxzinUEiP_vnWR6bXQhA&s",
               }}
             />
             <View className="py-2 px-2 w-[55%]">
@@ -43,18 +43,18 @@ const EventsReminderComponent = () => {
             <Image
               className="h-20 w-36 rounded-sm"
               source={{
-                uri: "https://img.freepik.com/free-photo/image-wheat-field-with-blue-sky_661209-305.jpg?t=st=1712774045~exp=1712777645~hmac=f0f1d4809bd9dd00d40087281c1feb8c60f7426de520b05dbdb9f694291f9abc&w=1060",
+                uri: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdyQZwexDulXbCEufZUTdXYgHL8GVjvq1CxW2PywjpOQ&s",
               }}
             />
             <View className="py-2 px-2 w-[55%]">
-              <Text className=" text-base font-semibold">AgriTech 2024</Text>
+              <Text className=" text-base font-semibold">Kisan Fair</Text>
               <View className="py-1 flex flex-row items-center">
                 <Ionicons
                   name="calendar-outline"
                   size={22}
                   color={"rgb(34, 197, 94)"}
                 />
-                <Text className="px-1 text-base">22May ~ 24May</Text>
+                <Text className="px-1 text-base">2May ~ 12May</Text>
               </View>
               <View className="py-1 flex flex-row items-center">
                 <Ionicons
