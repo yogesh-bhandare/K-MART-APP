@@ -10,7 +10,7 @@ const MyServicesComp = () => {
       <View className="px-4 py-5">
         <Text className="text-xl font-semibold">My Services</Text>
       </View>
-      <TouchableOpacity onPress={() => navigation.navigate("WeatherScreen")}>
+      <TouchableOpacity onPress={() => navigation.navigate("CommingSoon")}>
         <View className="px-4 py-2 border-b-2 border-gray-200 flex flex-row justify-between items-center">
           <View className="flex flex-row justify-start items-center">
             <Ionicons name="qr-code-outline" size={20} />
@@ -38,7 +38,7 @@ const MyServicesComp = () => {
           />
         </View>
       </TouchableOpacity>
-      <TouchableOpacity onPress={() => navigation.navigate("WeatherScreen")}>
+      <TouchableOpacity onPress={() => navigation.navigate("CommingSoon")}>
         <View className="px-4 py-2 border-b-2 border-gray-200 flex flex-row justify-between items-center">
           <View className="flex flex-row justify-start items-center">
             <Ionicons name="people-circle-outline" size={20} />

@@ -32,7 +32,7 @@ const SettingsScreen = () => {
             />
           </View>
         </TouchableOpacity>
-        <TouchableOpacity onPress={() => navigation.navigate("WeatherScreen")}>
+        <TouchableOpacity onPress={() => navigation.navigate("CommingSoon")}>
           <View className="px-4 py-2 border-b-2 border-gray-200 flex flex-row justify-between items-center">
             <View className="flex flex-row justify-start items-center">
               <Ionicons name="notifications-circle-outline" size={20} />
@@ -47,7 +47,7 @@ const SettingsScreen = () => {
             />
           </View>
         </TouchableOpacity>
-        <TouchableOpacity onPress={() => navigation.navigate("WeatherScreen")}>
+        <TouchableOpacity onPress={() => navigation.navigate("CommingSoon")}>
           <View className="px-4 py-2 border-b-2 border-gray-200 flex flex-row justify-between items-center">
             <View className="flex flex-row justify-start items-center">
               <Ionicons name="logo-whatsapp" size={20} />
@@ -62,7 +62,7 @@ const SettingsScreen = () => {
             />
           </View>
         </TouchableOpacity>
-        <TouchableOpacity onPress={() => navigation.navigate("WeatherScreen")}>
+        <TouchableOpacity onPress={() => navigation.navigate("CommingSoon")}>
           <View className="px-4 py-2 border-b-2 border-gray-200 flex flex-row justify-between items-center">
             <View className="flex flex-row justify-start items-center">
               <Ionicons name="reader-outline" size={20} />
@@ -77,7 +77,7 @@ const SettingsScreen = () => {
             />
           </View>
         </TouchableOpacity>
-        <TouchableOpacity onPress={() => navigation.navigate("WeatherScreen")}>
+        <TouchableOpacity onPress={() => navigation.navigate("CommingSoon")}>
           <View className="px-4 py-2 border-b-2 border-gray-200 flex flex-row justify-between items-center">
             <View className="flex flex-row justify-start items-center">
               <Ionicons name="shield-checkmark-outline" size={20} />
@@ -92,7 +92,7 @@ const SettingsScreen = () => {
             />
           </View>
         </TouchableOpacity>
-        <TouchableOpacity onPress={() => navigation.navigate("WeatherScreen")}>
+        <TouchableOpacity onPress={() => navigation.navigate("CommingSoon")}>
           <View className="px-4 py-2 border-b-2 border-gray-200 flex flex-row justify-between items-center">
             <View className="flex flex-row justify-start items-center">
               <Ionicons name="document-text-outline" size={20} />

@@ -6,7 +6,7 @@ import { useNavigation } from "@react-navigation/native";
 const FeedBackComp = () => {
     const navigation = useNavigation();
   return (
-    <TouchableOpacity>
+    <TouchableOpacity onPress={() => navigation.navigate('CommingSoon')}>
       <View className="px-4 py-4">
         <View className="flex flex-row justify-between items-center">
           <View className="w-[70%] flex flex-row justify-start items-center">

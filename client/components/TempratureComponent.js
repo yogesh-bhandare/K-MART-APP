@@ -11,7 +11,7 @@ const TempratureComponent = () => {
       <View className="px-4 w-full">
         <TouchableOpacity
           className="flex flex-row items-center justify-between"
-          onPress={() => navigation.navigate("WeatherScreen")}
+          onPress={() => navigation.navigate("CommingSoon")}
         >
           <View className="flex flex-row items-center justify-center px-2">
             <View>

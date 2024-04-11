@@ -10,7 +10,7 @@ const QuickLinkComp = () => {
       <View className="p-4 ">
         <Text className="text-xl font-semibold">Quick Links</Text>
       </View>
-      <TouchableOpacity onPress={() => navigation.navigate("WeatherScreen")}>
+      <TouchableOpacity onPress={() => navigation.navigate("CommingScreen")}>
         <View className="px-4 py-2 border-b-2 border-gray-200 flex flex-row justify-between items-center">
           <View className="flex flex-row justify-start items-center">
             <Ionicons name="partly-sunny-outline" size={20} />

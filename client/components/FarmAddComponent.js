@@ -6,7 +6,7 @@ import { useNavigation } from "@react-navigation/native";
 const FarmAddComponent = () => {
   const navigation = useNavigation();
   return (
-    <View className="h-[24vh] my-3 border-2 bg-white border-gray-100  ">
+    <View className="h-[24vh] border-2 bg-white border-gray-100  ">
       <View className="">
         <View className="px-4 py-2">
           <Text className="text-lg font-semibold">My Farm</Text>
@@ -14,9 +14,9 @@ const FarmAddComponent = () => {
         <View className="px-4 py-2">
           <View className="  flex flex-row items-center justify-center ">
             <Image
-              className=" h-20 w-36 rounded-sm"
+              className=" h-20 w-36 rounded-full"
               source={{
-                uri: "https://img.freepik.com/free-photo/image-wheat-field-with-blue-sky_661209-305.jpg?t=st=1712774045~exp=1712777645~hmac=f0f1d4809bd9dd00d40087281c1feb8c60f7426de520b05dbdb9f694291f9abc&w=1060",
+                uri: "https://img.freepik.com/free-photo/cultivated-field-sunset_1232-860.jpg?t=st=1712855255~exp=1712858855~hmac=03fdfd92aef875a958b36acc233a2872933e3f079cf5bcd0acad492cb6fc9a66&w=1060",
               }}
             />
             <View className="py-2 px-2 w-[55%]">
@@ -32,7 +32,7 @@ const FarmAddComponent = () => {
 
         <TouchableOpacity
           className="flex items-center justify-center "
-          onPress={() => navigation.navigate("MoreScreen")}
+          onPress={() => navigation.navigate("CommingSoon")}
         >
           <View className=" flex flex-row items-center justify-center border-t-2 border-gray-100 pt-2">
             <Text className="text-green-500 pr-2 font-semibold text-lg">

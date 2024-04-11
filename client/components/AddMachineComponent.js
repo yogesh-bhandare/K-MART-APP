@@ -14,9 +14,9 @@ const AddMachineComponent = () => {
         <View className="px-4 py-2">
           <View className="  flex flex-row items-center justify-center ">
             <Image
-              className=" h-20 w-36 rounded-sm"
+              className=" h-20 w-36 rounded-full"
               source={{
-                uri: "https://img.freepik.com/free-photo/image-wheat-field-with-blue-sky_661209-305.jpg?t=st=1712774045~exp=1712777645~hmac=f0f1d4809bd9dd00d40087281c1feb8c60f7426de520b05dbdb9f694291f9abc&w=1060",
+                uri: "https://img.freepik.com/free-vector/flat-farmer-s-day-celebration-illustration_23-2149759109.jpg?t=st=1712855161~exp=1712858761~hmac=36253f3882f84598bbf6de63306823a518f12183bdc19344d0223d9f143319b0&w=1060",
               }}
             />
             <View className="py-2 px-2 w-[55%]">
@@ -32,7 +32,7 @@ const AddMachineComponent = () => {
 
         <TouchableOpacity
           className="flex items-center justify-center "
-          onPress={() => navigation.navigate("MoreScreen")}
+          onPress={() => navigation.navigate("CommingSoon")}
         >
           <View className=" flex flex-row items-center justify-center border-t-2 border-gray-100 pt-2">
             <Text className="text-green-500 pr-2 font-semibold text-lg">

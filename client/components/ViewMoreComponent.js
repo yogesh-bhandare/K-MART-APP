@@ -9,7 +9,7 @@ const ViewMoreComponent = () => {
     <View className="h-[23vh] border-2 bg-white border-gray-100  ">
       <View className="px-4 w-full">
         <View className="flex flex-row items-center justify-evenly py-4">
-          <TouchableOpacity onPress={() => navigation.navigate("JunnarScreen")}>
+          <TouchableOpacity onPress={() => navigation.navigate("CommingSoon")}>
             <View className="flex items-center justify-center">
               <Image
                 className="h-16 w-16 rounded-full"
@@ -33,7 +33,7 @@ const ViewMoreComponent = () => {
               <Text className="py-2">Crop Doctor</Text>
             </View>
           </TouchableOpacity>
-          <TouchableOpacity onPress={() => navigation.navigate("JunnarScreen")}>
+          <TouchableOpacity onPress={() => navigation.navigate("News")}>
             <View className="flex items-center justify-center">
               <Image
                 className="h-16 w-16 rounded-full"
@@ -44,7 +44,7 @@ const ViewMoreComponent = () => {
               <Text className="py-2">News</Text>
             </View>
           </TouchableOpacity>
-          <TouchableOpacity onPress={() => navigation.navigate("JunnarScreen")}>
+          <TouchableOpacity onPress={() => navigation.navigate("ExpertArticlesScreen")}>
             <View className="flex items-center justify-center">
               <Image
                 className="h-16 w-16 rounded-full"

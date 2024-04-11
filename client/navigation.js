@@ -40,7 +40,7 @@ export default function Navigation() {
   useEffect(() => {
     setTimeout(() => {
       setSplashVisible(false);
-    }, 5000); 
+    }, 3000); 
   }, []);
 
   return (
