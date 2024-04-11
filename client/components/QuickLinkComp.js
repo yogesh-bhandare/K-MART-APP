@@ -24,6 +24,7 @@ const QuickLinkComp = () => {
         </View>
       </TouchableOpacity>
 
+      <TouchableOpacity onPress={() => navigation.navigate('News')}>
       <View className="px-4 py-2 border-b-2 border-gray-200 flex flex-row justify-between items-center">
         <View className="flex flex-row justify-start items-center">
           <Ionicons name="newspaper-outline" size={20} />
@@ -31,7 +32,9 @@ const QuickLinkComp = () => {
         </View>
         <Ionicons name="chevron-forward" size={20} color={"rgb(34, 197, 94)"} />
       </View>
+      </TouchableOpacity>
 
+    <TouchableOpacity onPress={() => navigation.navigate('Events')}>
       <View className="px-4 py-2 border-b-2 border-gray-200 flex flex-row justify-between items-center">
         <View className="flex flex-row justify-start items-center">
           <Ionicons name="calendar-outline" size={20} />
@@ -39,7 +42,9 @@ const QuickLinkComp = () => {
         </View>
         <Ionicons name="chevron-forward" size={20} color={"rgb(34, 197, 94)"} />
       </View>
+      </TouchableOpacity>
 
+    <TouchableOpacity onPress={() => navigation.navigate('GovernmentSchemes')}>
       <View className="px-4 py-2 border-b-2 border-gray-200 flex flex-row justify-between items-center">
         <View className="flex flex-row justify-start items-center">
           <Ionicons name="business-outline" size={20} />
@@ -49,7 +54,9 @@ const QuickLinkComp = () => {
         </View>
         <Ionicons name="chevron-forward" size={20} color={"rgb(34, 197, 94)"} />
       </View>
+      </TouchableOpacity>
 
+    <TouchableOpacity onPress={() => navigation.navigate('ExpertArticlesScreen')}>
       <View className="px-4 py-2 border-b-2 border-gray-200 flex flex-row justify-between items-center">
         <View className="flex flex-row justify-start items-center">
           <Ionicons name="newspaper-outline" size={20} />
@@ -57,6 +64,7 @@ const QuickLinkComp = () => {
         </View>
         <Ionicons name="chevron-forward" size={20} color={"rgb(34, 197, 94)"} />
       </View>
+      </TouchableOpacity>
     </View>
   );
 };

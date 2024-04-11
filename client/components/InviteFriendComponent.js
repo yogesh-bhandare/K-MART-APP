@@ -15,7 +15,7 @@ const InviteFreindComponent = () => {
           Help your farmer friends by inviting them to K-Mart
         </Text>
         <TouchableOpacity
-          onPress={() => navigation.navigate("MoreScreen")}
+          onPress={() => navigation.navigate("InviteFriendScreen")}
           className="my-1 h-12 w-40  rounded-lg bg-blue-400 flex flex-row justify-center items-center"
         >
           <Text className="text-center text-xm px-1 font-semibold text-white">

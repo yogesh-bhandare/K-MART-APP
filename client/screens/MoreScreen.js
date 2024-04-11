@@ -23,10 +23,15 @@ function MoreScreen() {
         <ScrollView>
           <View className="p-4 h-24 flex flex-row justify-start items-center">
             <View className="h-20 w-20 rounded-full bg-green-300">
-              {/* <Image source={{uri: ''}}></Image> */}
+            <Image
+            className=" h-20 w-20 rounded-full"
+            source={{
+              uri: "https://img.freepik.com/free-vector/flat-farmer-s-day-celebration-illustration_23-2149835101.jpg?t=st=1712779661~exp=1712783261~hmac=6a37369ff23d0e7d0485591eb7f80c61c00e59951c062e466b05f10780e10f0e&w=740",
+            }}
+          />
             </View>
             <View className="pl-4">
-              <Text className="text-base">Yogesh Bhandare</Text>
+              <Text className="text-base">Ramchandra Bhandare</Text>
               <TouchableOpacity
                 className="flex flex-row justify-start items-center"
                 onPress={() => navigation.navigate("ProfileScreen")}

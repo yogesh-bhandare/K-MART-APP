@@ -23,7 +23,7 @@ const ExpertArticleComponent = () => {
             </View>
             </View>
 
-        <TouchableOpacity className="flex items-center justify-center" onPress={() => navigation.navigate("MoreScreen")}>
+        <TouchableOpacity className="flex items-center justify-center" onPress={() => navigation.navigate("ExpertArticlesScreen")}>
           <View className=" flex flex-row items-center justify-center border-t-2 border-gray-100 pt-2">
             <Text className="text-green-500 pr-2 font-semibold text-lg">
               View All Articles

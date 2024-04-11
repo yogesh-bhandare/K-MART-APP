@@ -1,4 +1,4 @@
-import { View, Text, TouchableOpacity, Share } from "react-native";
+import { View, Text, TouchableOpacity, Share, Image } from "react-native";
 import React from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useNavigation } from "@react-navigation/native";
@@ -42,7 +42,12 @@ const InviteFriendScreen = () => {
         <View className=" h-[84vh]">
           <View className="flex-1 flex-col items-center justify-center">
             <View className="h-20 w-20 rounded-full bg-green-300">
-              {/* <Image source={{uri: ''}}></Image> */}
+            <Image
+            className=" h-20 w-20 rounded-full"
+            source={{
+              uri: "https://img.freepik.com/free-vector/flat-farmer-s-day-celebration-illustration_23-2149835101.jpg?t=st=1712779661~exp=1712783261~hmac=6a37369ff23d0e7d0485591eb7f80c61c00e59951c062e466b05f10780e10f0e&w=740",
+            }}
+          />
             </View>
             <Text>Invite friends to K-Mart</Text>
             <View>

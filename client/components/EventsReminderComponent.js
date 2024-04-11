@@ -6,7 +6,7 @@ import { useNavigation } from "@react-navigation/native";
 const EventsReminderComponent = () => {
   const navigation = useNavigation();
   return (
-    <View className="h-[40vh] my-3 border-2 bg-white border-gray-100  ">
+    <View className="h-[41vh] my-3 border-2 bg-white border-gray-100  ">
       <View className="">
         <View className="px-4 py-2">
           <Text className="text-lg font-semibold">Events Reminder</Text>
@@ -71,7 +71,7 @@ const EventsReminderComponent = () => {
 
         <TouchableOpacity
           className="flex items-center justify-center"
-          onPress={() => navigation.navigate("MoreScreen")}
+          onPress={() => navigation.navigate("Events")}
         >
           <View className=" flex flex-row items-center justify-center border-t-2 border-gray-100 pt-2">
             <Text className="text-green-500 pr-2 font-semibold text-lg">

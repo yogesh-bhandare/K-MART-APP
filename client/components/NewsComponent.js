@@ -6,7 +6,7 @@ import { useNavigation } from "@react-navigation/native";
 const NewsComponent = () => {
   const navigation = useNavigation();
   return (
-    <View className="h-[36vh] my-3 border-2 bg-white border-gray-100  ">
+    <View className="h-[37vh] my-3 border-2 bg-white border-gray-100  ">
         <View className="">
         <View className="px-4 py-2">
             <Text className="text-lg font-semibold">News Updates</Text>
@@ -32,7 +32,7 @@ const NewsComponent = () => {
             </View>
             </View>
 
-        <TouchableOpacity className="flex items-center justify-center" onPress={() => navigation.navigate("MoreScreen")}>
+        <TouchableOpacity className="flex items-center justify-center" onPress={() => navigation.navigate("News")}>
           <View className=" flex flex-row items-center justify-center border-t-2 border-gray-100 pt-2">
             <Text className="text-green-500 pr-2 font-semibold text-lg">
               View All News

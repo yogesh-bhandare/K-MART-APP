@@ -9,7 +9,7 @@ function FirstScreen() {
 
   const sendSelectionToBackend = async (user) => {
     try {
-      const response = await fetch('http://192.168.43.249:8000/user_type/', {
+      const response = await fetch('http://192.168.108.7:8000/user_type/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
