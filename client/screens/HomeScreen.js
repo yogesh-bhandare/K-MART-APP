@@ -1,8 +1,6 @@
 import React from "react";
 import { View, Text, TouchableOpacity, ScrollView } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
-import { StatusBar } from "expo-status-bar";
-import * as Icon from "react-native-feather"
 import { useNavigation } from "@react-navigation/native";
 import Footer from "../components/Footer";
 import CompleteProfile from "../components/CompleteProfileComponent";
