@@ -32,7 +32,7 @@ const ProfileScreen = () => {
       <View className="h-[82vh]">
         <ScrollView>
           <View>
-            <View className="bg-white flex items-center justify-center h-[16vh]">
+            <View className="bg-white flex items-center justify-center py-2">
               <Image
                 className=" h-24 w-24 rounded-full"
                 source={{
