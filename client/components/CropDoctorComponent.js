@@ -10,7 +10,7 @@ const CropDoctorComponent = () => {
     const navigation = useNavigation()
     return (
             <TouchableOpacity className="my-3" onPress={() => navigation.navigate("CropDoctorScreen")}>
-            <View className=" h-[22vh] bg-green-300 px-4 py-3 flex-row justify-between items-center">
+            <View className="py-2 bg-green-300 px-4 flex-row justify-between items-center">
               <View className="w-[60%]">
               <Text className=" text-lg font-semibold">Crop Doctor</Text>
                 <Text className="py-2 text-sm">

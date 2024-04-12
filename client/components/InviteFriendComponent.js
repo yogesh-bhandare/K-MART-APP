@@ -6,7 +6,7 @@ import { useNavigation } from "@react-navigation/native";
 const InviteFreindComponent = () => {
   const navigation = useNavigation();
   return (
-    <View className="my-3 bg-blue-200 h-[22vh] px-4 py-4 flex-row justify-between items-center">
+    <View className="my-3 bg-blue-200 px-4 py-2 flex-row justify-between items-center">
       <View className="w-[60%]">
         <Text className=" text-base font-semibold">
             Invite Friend

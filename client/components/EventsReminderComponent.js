@@ -6,7 +6,7 @@ import { useNavigation } from "@react-navigation/native";
 const EventsReminderComponent = () => {
   const navigation = useNavigation();
   return (
-    <View className="h-[41vh] my-3 border-2 bg-white border-gray-100  ">
+    <View className="py-2 my-3 border-2 bg-white border-gray-100  ">
       <View className="">
         <View className="px-4 py-2">
           <Text className="text-lg font-semibold">Events Reminder</Text>

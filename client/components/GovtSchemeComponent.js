@@ -6,7 +6,7 @@ import { useNavigation } from "@react-navigation/native";
 const GovtSchemeComponent = () => {
   const navigation = useNavigation();
   return (
-    <View className="h-[37vh] border-2 bg-white border-gray-100  ">
+    <View className="py-2 border-2 bg-white border-gray-100  ">
         <View className="">
         <View className="px-4 py-2">
             <Text className="text-lg font-semibold">Government Schemes</Text>

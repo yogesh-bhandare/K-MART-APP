@@ -6,7 +6,7 @@ import { useNavigation } from "@react-navigation/native";
 const AddFarmComponent = () => {
   const navigation = useNavigation();
   return (
-    <View className=" bg-white h-[24vh] px-4 py-4 flex-row justify-between items-center">
+    <View className=" bg-white px-4 py-2 flex-row justify-between items-center">
       <View className="w-[60%]">
         <Text className=" text-base font-semibold">
           Have you marked your farm?

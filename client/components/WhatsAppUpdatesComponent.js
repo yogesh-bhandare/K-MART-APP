@@ -17,8 +17,8 @@ const WhatsAppComponent = () => {
   };
 
   return (
-    <View className="h-[9vh] my-3 rounded-lg shadow-lg shadow-black mx-4 bg-white border-b-2 border-gray-100 flex flex-row justify-center items-center">
-      <View className="px-4 w-full flex flex-row ">
+    <View className="py-3 my-3 rounded-lg shadow-lg shadow-black mx-4 bg-white  flex flex-row justify-center items-center">
+      <View className="px-2 w-full flex flex-row ">
           <View className="flex flex-row items-center justify-center px-2">
             <Image
               className="h-8 w-8 rounded-md"

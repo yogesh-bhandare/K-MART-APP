@@ -14,7 +14,7 @@ const FeedbackComponent = () => {
   };
 
   return (
-    <View className=" mb-28 bg-white h-[22vh] px-4 py-4 flex-row justify-between items-center">
+    <View className=" mb-28 bg-white  px-4 py-2 flex-row justify-between items-center">
       <View className="w-[60%]">
         <Text className=" text-base font-semibold">
           How would you rate K-Mart App?

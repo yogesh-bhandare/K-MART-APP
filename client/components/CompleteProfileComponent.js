@@ -6,7 +6,7 @@ import { useNavigation } from "@react-navigation/native";
 const CompleteProfile = () => {
     const navigation = useNavigation();
   return (
-    <View className="h-[12vh] bg-green-100 border-b-2 border-gray-100 flex flex-row justify-center items-center">
+    <View className="py-2 bg-green-100 border-b-2 border-gray-100 flex flex-row justify-center items-center">
       <View className="px-4 w-full">
         <TouchableOpacity
           className="flex flex-row items-center justify-between"

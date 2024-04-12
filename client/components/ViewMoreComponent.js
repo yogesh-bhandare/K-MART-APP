@@ -6,7 +6,7 @@ import { useNavigation } from "@react-navigation/native";
 const ViewMoreComponent = () => {
   const navigation = useNavigation();
   return (
-    <View className="h-[23vh] border-2 bg-white border-gray-100  ">
+    <View className="py-2 border-2 bg-white border-gray-100  ">
       <View className="px-4 w-full">
         <View className="flex flex-row items-center justify-evenly py-4">
           <TouchableOpacity onPress={() => navigation.navigate("CommingSoon")}>

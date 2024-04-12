@@ -42,13 +42,13 @@ function MandiScreen() {
     },
     {
       id: 5,
-      name: "Carrot",
+      name: "Banana",
       imgURI:
         "https://img.freepik.com/free-vector/healthy-orange-carrots-graphic-illustration_53876-8469.jpg?t=st=1708781899~exp=1708785499~hmac=5ef0cd8f666bc958a7bff8e070cf199979764a4403c1b811a9d90da02a0ee8bf&w=740",
     },
     {
       id: 6,
-      name: "Carrot",
+      name: "Apple",
       imgURI:
         "https://img.freepik.com/free-vector/healthy-orange-carrots-graphic-illustration_53876-8469.jpg?t=st=1708781899~exp=1708785499~hmac=5ef0cd8f666bc958a7bff8e070cf199979764a4403c1b811a9d90da02a0ee8bf&w=740",
     },

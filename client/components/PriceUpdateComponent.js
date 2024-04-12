@@ -6,7 +6,7 @@ import { useNavigation } from "@react-navigation/native";
 const PriceUpdateComponent = () => {
   const navigation = useNavigation();
   return (
-    <View className="h-[37vh] border-2 bg-white border-gray-100  ">
+    <View className="py-2 border-2 bg-white border-gray-100  ">
       <View className="px-6 w-full">
         <View className="py-3">
           <Text className="text-lg font-semibold ">Market Prices Update</Text>
