@@ -27,13 +27,13 @@ function VerifyMobile() {
   };
 
   const handlePhoneNumberChange = (value) => {
-    const formattedValue = value.replace(/\D/g, "");
+    const formattedValue = value.replace(/\D/g, "").slice(0,10);
     setPhoneNumber(formattedValue);
   };
 
   const handleSubmit = async () => {
     try {
-      const response = await fetch('http://192.168.108.7:8000/phone_number/', {
+      const response = await fetch('http://192.168.153.7:8000/phone_number/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

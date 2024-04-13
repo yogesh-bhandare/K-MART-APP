@@ -17,7 +17,7 @@ const ViewMoreComponent = () => {
                   uri: "https://img.freepik.com/free-vector/qr-code-qr-generator-online-qr-code-reading-warehouse-modern-technology-automated-inventory-management-systems-product-information_335657-4525.jpg?w=740",
                 }}
               />
-              <Text className="py-2">Verify Bayer</Text>
+              <Text className="py-2">Verify Buyer</Text>
             </View>
           </TouchableOpacity>
           <TouchableOpacity

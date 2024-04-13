@@ -15,7 +15,7 @@ const MyServicesComp = () => {
           <View className="flex flex-row justify-start items-center">
             <Ionicons name="qr-code-outline" size={20} />
             <Text className=" px-2 text-base text-gray-500">
-              Verify Bayer Products
+              Verify Buyer Products
             </Text>
           </View>
           <Ionicons

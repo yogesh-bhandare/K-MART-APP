@@ -30,21 +30,21 @@ const ManageCrops = () => {
     },
     {
       id: 4,
-      name: "Carrot",
+      name: "Tomato",
       imgURI:
-        "https://img.freepik.com/free-vector/healthy-orange-carrots-graphic-illustration_53876-8469.jpg?t=st=1708781899~exp=1708785499~hmac=5ef0cd8f666bc958a7bff8e070cf199979764a4403c1b811a9d90da02a0ee8bf&w=740",
+        "https://img.freepik.com/free-photo/fresh-red-tomatoes_2829-13449.jpg?t=st=1712984168~exp=1712987768~hmac=7cbba18620b0369c695dd8b10d662514d34b911d3104e9d1e3f79b45b42ba6df&w=826",
     },
     {
       id: 5,
-      name: "Carrot",
+      name: "Potato",
       imgURI:
-        "https://img.freepik.com/free-vector/healthy-orange-carrots-graphic-illustration_53876-8469.jpg?t=st=1708781899~exp=1708785499~hmac=5ef0cd8f666bc958a7bff8e070cf199979764a4403c1b811a9d90da02a0ee8bf&w=740",
+        "https://img.freepik.com/free-photo/potato-table_144627-14824.jpg?t=st=1712984242~exp=1712987842~hmac=fecc089de8d68606bb016237ce5f3b9e2318338ec433f891ca16a98089921e9a&w=740",
     },
     {
       id: 6,
-      name: "Carrot",
+      name: "Wheat",
       imgURI:
-        "https://img.freepik.com/free-vector/healthy-orange-carrots-graphic-illustration_53876-8469.jpg?t=st=1708781899~exp=1708785499~hmac=5ef0cd8f666bc958a7bff8e070cf199979764a4403c1b811a9d90da02a0ee8bf&w=740",
+        "https://img.freepik.com/free-vector/realistic-wheat-composition_1284-22993.jpg?t=st=1712984296~exp=1712987896~hmac=321abf5b37d0e5c8b192e568945f5a567b27747e0d90a138ce91e71d45d5f1c9&w=740",
     },
   ]);
 
