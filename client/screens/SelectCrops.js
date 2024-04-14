@@ -91,28 +91,21 @@ const ManageCrops = () => {
         </View>
         </View>
         <View className="flex flex-row items-center flex-wrap m-1 px-4">
-          {selectedCrops.map((crop) => (
-            <View className=""> 
-            <View
-              key={crop.id}
-              className="bg-green-500 text-white border border-green-200 m-1 px-2 rounded-md"
-            >
-              <TouchableOpacity>
-                <View className={`flex items-center m-1 p-2 rounded-md`}>
-                  <Image
-                    source={{ uri: crop.imgURI }}
-                    className="rounded-full h-16 w-16"
-                  />
-                  <Text className="text-center text-white">{crop.name}</Text>
-                  <TouchableOpacity onPress={() => handleCropSelection(crop)}>
-                    <Ionicons name="close-circle" size={24} color="white" />
-                  </TouchableOpacity>
-                </View>
-              </TouchableOpacity>
-            </View>
-            </View>
-          ))}
+  {selectedCrops.map((crop) => (
+    <View key={crop.id} className="bg-green-500 text-white border border-green-200 m-1 px-2 rounded-md">
+      <TouchableOpacity>
+        <View className={`flex items-center m-1 p-2 rounded-md`}>
+          <Image source={{ uri: crop.imgURI }} className="rounded-full h-16 w-16" />
+          <Text className="text-center text-white">{crop.name}</Text>
+          <TouchableOpacity onPress={() => handleCropSelection(crop)}>
+            <Ionicons name="close-circle" size={24} color="white" />
+          </TouchableOpacity>
         </View>
+      </TouchableOpacity>
+    </View>
+  ))}
+</View>
+
         <View className="flex items-center">
           <FlatList
             data={crops}

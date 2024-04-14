@@ -9,10 +9,9 @@ const TempratureComponent = () => {
   return (
     <View className="h-[10vh] my-2 bg-white border-2 border-gray-100 flex flex-row justify-center items-center">
       <View className="px-4 w-full">
-        <TouchableOpacity
-          className="flex flex-row items-center justify-between"
-          onPress={() => navigation.navigate("CommingSoon")}
-        >
+        
+          <View className="flex flex-row items-center justify-between">
+
           <View className="flex flex-row items-center justify-center px-2">
             <View>
             <Text className=" text-base  font-semibold">Today, Shivajinager</Text>
@@ -29,7 +28,7 @@ const TempratureComponent = () => {
                 uri: "https://img.freepik.com/free-vector/sun-clouds_23-2147511485.jpg?w=740",
               }}
             />
-        </TouchableOpacity>
+          </View>
       </View>
     </View>
   )

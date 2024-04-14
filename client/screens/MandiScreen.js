@@ -327,7 +327,7 @@ function MandiScreen() {
       const priceA = parseFloat(a.priceTodayWithData.split(" - ")[0]);
       const priceB = parseFloat(b.priceTodayWithData.split(" - ")[0]);
       return priceA - priceB;
-    });
+    }).reverse();
     setMarketNearby(sortedMarketNearby);
     setSortBy("price");
   };
