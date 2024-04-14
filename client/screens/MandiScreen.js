@@ -95,6 +95,126 @@ function MandiScreen() {
       priceRange: "18 Feb ~ 7kg",
       screenName: "PimpriScreen",
     },
+    {
+      id: 6,
+      name: "P",
+      distance: "60 km",
+      priceTodayWithData: "110 - 160",
+      priceRange: "18 Feb ~ 7kg",
+      screenName: "PimpriScreen",
+    },
+    {
+      id: 7,
+      name: "Pi",
+      distance: "60 km",
+      priceTodayWithData: "110 - 160",
+      priceRange: "18 Feb ~ 7kg",
+      screenName: "PimpriScreen",
+    },
+    {
+      id: 8,
+      name: "Pim",
+      distance: "60 km",
+      priceTodayWithData: "110 - 160",
+      priceRange: "18 Feb ~ 7kg",
+      screenName: "PimpriScreen",
+    },
+    {
+      id: 9,
+      name: "Pimp",
+      distance: "60 km",
+      priceTodayWithData: "110 - 160",
+      priceRange: "18 Feb ~ 7kg",
+      screenName: "PimpriScreen",
+    },
+    {
+      id: 10,
+      name: "Pimpr",
+      distance: "60 km",
+      priceTodayWithData: "110 - 160",
+      priceRange: "18 Feb ~ 7kg",
+      screenName: "PimpriScreen",
+    },
+    {
+      id: 11,
+      name: "Pimpri",
+      distance: "60 km",
+      priceTodayWithData: "110 - 160",
+      priceRange: "18 Feb ~ 7kg",
+      screenName: "PimpriScreen",
+    },
+    {
+      id: 12,
+      name: "i",
+      distance: "60 km",
+      priceTodayWithData: "110 - 160",
+      priceRange: "18 Feb ~ 7kg",
+      screenName: "PimpriScreen",
+    },
+    {
+      id: 13,
+      name: "ri",
+      distance: "60 km",
+      priceTodayWithData: "110 - 160",
+      priceRange: "18 Feb ~ 7kg",
+      screenName: "PimpriScreen",
+    },
+    {
+      id: 14,
+      name: "pri",
+      distance: "60 km",
+      priceTodayWithData: "110 - 160",
+      priceRange: "18 Feb ~ 7kg",
+      screenName: "PimpriScreen",
+    },
+    {
+      id: 15,
+      name: "mpri",
+      distance: "60 km",
+      priceTodayWithData: "110 - 160",
+      priceRange: "18 Feb ~ 7kg",
+      screenName: "PimpriScreen",
+    },
+    {
+      id: 16,
+      name: "impri",
+      distance: "60 km",
+      priceTodayWithData: "110 - 160",
+      priceRange: "18 Feb ~ 7kg",
+      screenName: "PimpriScreen",
+    },
+    {
+      id: 17,
+      name: "Pimpri",
+      distance: "60 km",
+      priceTodayWithData: "110 - 160",
+      priceRange: "18 Feb ~ 7kg",
+      screenName: "PimpriScreen",
+    },
+    {
+      id: 18,
+      name: "Piri",
+      distance: "60 km",
+      priceTodayWithData: "110 - 160",
+      priceRange: "18 Feb ~ 7kg",
+      screenName: "PimpriScreen",
+    },
+    {
+      id: 19,
+      name: "Pii",
+      distance: "60 km",
+      priceTodayWithData: "110 - 160",
+      priceRange: "18 Feb ~ 7kg",
+      screenName: "PimpriScreen",
+    },
+    {
+      id: 20,
+      name: "Pmpri",
+      distance: "60 km",
+      priceTodayWithData: "110 - 160",
+      priceRange: "18 Feb ~ 7kg",
+      screenName: "PimpriScreen",
+    },
   ]);
 
   const [pinnedItems, setPinnedItems] = useState([]);
@@ -105,7 +225,12 @@ function MandiScreen() {
 
   const handleSelectCrop = (crop) => {
     setSelectedCrop(crop);
+  
+    const randomItems = marketNearby.sort(() => 0.5 - Math.random()).slice(0, 5);
+  
+    setMarketNearby(randomItems);
   };
+  
 
   const renderCrop = ({ item }) => (
     <TouchableOpacity
@@ -220,7 +345,7 @@ function MandiScreen() {
       <View className="px-2">
         <View className=" flex flex-row justify-between">
           <FlatList
-            data={cropList}
+            data={crops}
             renderItem={renderCrop}
             keyExtractor={(item) => item.id.toString()}
             horizontal
