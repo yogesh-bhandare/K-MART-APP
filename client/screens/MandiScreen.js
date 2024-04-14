@@ -61,7 +61,7 @@ function MandiScreen() {
       distance: "33 km",
       priceTodayWithData: "100 - 150",
       priceRange: "21 Feb ~ 10kg",
-      screenName: "KhedSceen",
+      screenName: "CommingSoon",
     },
     {
       id: 2,
@@ -69,7 +69,7 @@ function MandiScreen() {
       distance: "25 km",
       priceTodayWithData: "120 - 170",
       priceRange: "20 Feb ~ 9kg",
-      screenName: "WaiScreen",
+      screenName: "CommingSoon",
     },
     {
       id: 3,
@@ -77,7 +77,7 @@ function MandiScreen() {
       distance: "40 km",
       priceTodayWithData: "90 - 140",
       priceRange: "19 Feb ~ 8kg",
-      screenName: "JunnarScreen",
+      screenName: "CommingSoon",
     },
     {
       id: 4,
@@ -85,7 +85,7 @@ function MandiScreen() {
       distance: "15 km",
       priceTodayWithData: "130 - 180",
       priceRange: "22 Feb ~ 11kg",
-      screenName: "SataraScreen",
+      screenName: "CommingSoon",
     },
     {
       id: 5,
@@ -93,7 +93,7 @@ function MandiScreen() {
       distance: "60 km",
       priceTodayWithData: "110 - 160",
       priceRange: "18 Feb ~ 7kg",
-      screenName: "PimpriScreen",
+      screenName: "CommingSoon",
     },
     {
       id: 6,
@@ -101,7 +101,7 @@ function MandiScreen() {
       distance: "60 km",
       priceTodayWithData: "110 - 160",
       priceRange: "18 Feb ~ 7kg",
-      screenName: "PimpriScreen",
+      screenName: "CommingSoon",
     },
     {
       id: 7,
@@ -109,7 +109,7 @@ function MandiScreen() {
       distance: "60 km",
       priceTodayWithData: "110 - 160",
       priceRange: "18 Feb ~ 7kg",
-      screenName: "PimpriScreen",
+      screenName: "CommingSoon",
     },
     {
       id: 8,
@@ -117,7 +117,7 @@ function MandiScreen() {
       distance: "60 km",
       priceTodayWithData: "110 - 160",
       priceRange: "18 Feb ~ 7kg",
-      screenName: "PimpriScreen",
+      screenName: "CommingSoon",
     },
     {
       id: 9,
@@ -125,7 +125,7 @@ function MandiScreen() {
       distance: "60 km",
       priceTodayWithData: "110 - 160",
       priceRange: "18 Feb ~ 7kg",
-      screenName: "PimpriScreen",
+      screenName: "CommingSoon",
     },
     {
       id: 10,
@@ -133,7 +133,7 @@ function MandiScreen() {
       distance: "60 km",
       priceTodayWithData: "110 - 160",
       priceRange: "18 Feb ~ 7kg",
-      screenName: "PimpriScreen",
+      screenName: "CommingSoon",
     },
     {
       id: 11,
@@ -141,7 +141,7 @@ function MandiScreen() {
       distance: "60 km",
       priceTodayWithData: "110 - 160",
       priceRange: "18 Feb ~ 7kg",
-      screenName: "PimpriScreen",
+      screenName: "CommingSoon",
     },
     {
       id: 12,
@@ -149,7 +149,7 @@ function MandiScreen() {
       distance: "60 km",
       priceTodayWithData: "110 - 160",
       priceRange: "18 Feb ~ 7kg",
-      screenName: "PimpriScreen",
+      screenName: "CommingSoon",
     },
     {
       id: 13,
@@ -157,7 +157,7 @@ function MandiScreen() {
       distance: "60 km",
       priceTodayWithData: "110 - 160",
       priceRange: "18 Feb ~ 7kg",
-      screenName: "PimpriScreen",
+      screenName: "CommingSoon",
     },
     {
       id: 14,
@@ -165,7 +165,7 @@ function MandiScreen() {
       distance: "60 km",
       priceTodayWithData: "110 - 160",
       priceRange: "18 Feb ~ 7kg",
-      screenName: "PimpriScreen",
+      screenName: "CommingSoon",
     },
     {
       id: 15,
@@ -173,7 +173,7 @@ function MandiScreen() {
       distance: "60 km",
       priceTodayWithData: "110 - 160",
       priceRange: "18 Feb ~ 7kg",
-      screenName: "PimpriScreen",
+      screenName: "CommingSoon",
     },
     {
       id: 16,
@@ -181,7 +181,7 @@ function MandiScreen() {
       distance: "60 km",
       priceTodayWithData: "110 - 160",
       priceRange: "18 Feb ~ 7kg",
-      screenName: "PimpriScreen",
+      screenName: "CommingSoon",
     },
     {
       id: 17,
@@ -189,7 +189,7 @@ function MandiScreen() {
       distance: "60 km",
       priceTodayWithData: "110 - 160",
       priceRange: "18 Feb ~ 7kg",
-      screenName: "PimpriScreen",
+      screenName: "CommingSoon",
     },
     {
       id: 18,
@@ -197,7 +197,7 @@ function MandiScreen() {
       distance: "60 km",
       priceTodayWithData: "110 - 160",
       priceRange: "18 Feb ~ 7kg",
-      screenName: "PimpriScreen",
+      screenName: "CommingSoon",
     },
     {
       id: 19,
@@ -205,7 +205,7 @@ function MandiScreen() {
       distance: "60 km",
       priceTodayWithData: "110 - 160",
       priceRange: "18 Feb ~ 7kg",
-      screenName: "PimpriScreen",
+      screenName: "CommingSoon",
     },
     {
       id: 20,
@@ -213,7 +213,7 @@ function MandiScreen() {
       distance: "60 km",
       priceTodayWithData: "110 - 160",
       priceRange: "18 Feb ~ 7kg",
-      screenName: "PimpriScreen",
+      screenName: "CommingSoon",
     },
   ]);
 
