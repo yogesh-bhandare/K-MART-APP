@@ -7,6 +7,26 @@ import { SafeAreaView } from "react-native-safe-area-context";
 
 const SettingsScreen = () => {
   const navigation = useNavigation();
+
+  const handleLogout = async () => {
+    try {
+      const response = await fetch('http://192.168.43.249:8000/signout/', {
+        method: 'POST', 
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      });
+
+      if (!response.ok) {
+        throw new Error('Logout failed');
+      }
+
+      navigation.navigate('VerifyNumScreen'); 
+    } catch (error) {
+      Alert.alert('Error', 'Logout failed. Please try again.');
+    }
+  };
+
   return (
     <SafeAreaView className="bg-white">
       <View>
@@ -97,6 +117,19 @@ const SettingsScreen = () => {
             <View className="flex flex-row justify-start items-center">
               <Ionicons name="document-text-outline" size={20} />
               <Text className=" px-2 text-base text-gray-500">Licences</Text>
+            </View>
+            <Ionicons
+              name="chevron-forward"
+              size={20}
+              color={"rgb(34, 197, 94)"}
+            />
+          </View>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={handleLogout}>
+          <View className="px-4 py-2 border-b-2 border-gray-200 flex flex-row justify-between items-center">
+            <View className="flex flex-row justify-start items-center">
+              <Ionicons name="log-out-outline" size={20} />
+              <Text className=" px-2 text-base text-gray-500">Sign Out</Text>
             </View>
             <Ionicons
               name="chevron-forward"

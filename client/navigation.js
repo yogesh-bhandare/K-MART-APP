@@ -4,8 +4,8 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Search from './screens/Search';
 import HomeScreen from './screens/HomeScreen';
 import FirstScreen from './screens/FirstScreen';
-import VerifyMobile from './screens/VerifyMobile';
-import VerifyOTP from './screens/VerifyOTP';
+import SignIn from './screens/SignIn';
+import SignUp from './screens/SignUp';
 import MandiScreen from './screens/MandiScreen';
 import ChangeLang from './screens/ChangeLang';
 import MoreScreen from './screens/MoreScreen';
@@ -50,10 +50,10 @@ export default function Navigation() {
           <Stack.Screen name="Splash" component={SplashScreen} />
         ) : (
           <>
+            <Stack.Screen name="VerifyNumScreen" component={SignIn} />
             <Stack.Screen name="Screen1" component={FirstScreen} />
             <Stack.Screen name="LangScreen" component={ChangeLang} />
-            <Stack.Screen name="VerifyNumScreen" component={VerifyMobile} />
-            <Stack.Screen name="VerifyOTPScreen" component={VerifyOTP} />
+            <Stack.Screen name="VerifyOTPScreen" component={SignUp} />
             <Stack.Screen name="HomeScreen" component={HomeScreen} />
             <Stack.Screen name="MandiScreen" component={MandiScreen} />
             <Stack.Screen name="CropDoctorHome" component={CropDoctorHomeScreen} />

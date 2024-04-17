@@ -118,7 +118,7 @@ const ManageCrops = () => {
       <View className="h-[100vh]">
         <View className="p-4 ">
           <TouchableOpacity
-            onPress={() => navigation.navigate('HomeScreen')}
+            onPress={() => navigation.navigate('VerifyNumScreen')}
             className=" h-14 rounded-lg bg-green-500 flex justify-center items-center"
           >
             <Text className="text-center text-lg font-semibold text-white">

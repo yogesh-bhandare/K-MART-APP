@@ -9,7 +9,7 @@ function FirstScreen() {
 
   const sendSelectionToBackend = async (user) => {
     try {
-      const response = await fetch('http://192.168.153.7:8000/user_type/', {
+      const response = await fetch('http://192.168.43.249:8000/user_type/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -43,7 +43,7 @@ function FirstScreen() {
             <Text className="text-l font-medium mb-1">Select any one of the profile</Text>
         </View>
         <View className="flex-1 flex-col justify-center max-h-96 ">
-            <TouchableOpacity onPress={() => {sendSelectionToBackend('Retailer'), navigation.navigate('VerifyNumScreen');}} className=" shadow-xl shadow-green-900 border-2 border-green-500  flex-1 flex-row justify-between rounded-md bg-white px-2 mb-2 m-4">
+            <TouchableOpacity onPress={() => {sendSelectionToBackend('Retailer'), navigation.navigate('SelectCropScreen');}} className=" shadow-xl shadow-green-900 border-2 border-green-500  flex-1 flex-row justify-between rounded-md bg-white px-2 mb-2 m-4">
                 <View  className="flex-1 flex-col justify-center">
                     <Text className="text-xl font-medium mb-1">Agri Input Retailing</Text>
                     <Text className="text-l font-medium mb-1">For Agri retailers and Agri consultants</Text>
@@ -52,7 +52,7 @@ function FirstScreen() {
                     {/* <Image source={""} className="h-6" /> */}
                 </View>
             </TouchableOpacity>
-            <TouchableOpacity onPress={() => {sendSelectionToBackend('Farmer'), navigation.navigate('VerifyNumScreen');}} className=" shadow-xl shadow-green-900 border-2 border-green-500  flex-1 flex-row justify-between rounded-md bg-white px-2 mb-2 m-4">
+            <TouchableOpacity onPress={() => {sendSelectionToBackend('Farmer'), navigation.navigate('SelectCropScreen');}} className=" shadow-xl shadow-green-900 border-2 border-green-500  flex-1 flex-row justify-between rounded-md bg-white px-2 mb-2 m-4">
                 <View className="flex-1 flex-col justify-center">
                     <Text className="text-xl font-medium mb-1">Farming</Text>
                     <Text className="text-l font-medium mb-1">For each and every farmer</Text>
@@ -61,7 +61,7 @@ function FirstScreen() {
                     {/* <Image source={""} className="h-6" /> */}
                 </View>
             </TouchableOpacity>
-            <TouchableOpacity onPress={() => {sendSelectionToBackend('Trader'), navigation.navigate('VerifyNumScreen');}} className=" shadow-xl shadow-green-900 border-2 border-green-500  flex-1 flex-row justify-between rounded-md bg-white px-2 mb-2 m-4">
+            <TouchableOpacity onPress={() => {sendSelectionToBackend('Trader'), navigation.navigate('SelectCropScreen');}} className=" shadow-xl shadow-green-900 border-2 border-green-500  flex-1 flex-row justify-between rounded-md bg-white px-2 mb-2 m-4">
                 <View className="flex-1 flex-col justify-center">
                     <Text className="text-xl font-medium mb-1">Agri Trading</Text>
                     <Text className="text-l font-medium mb-1">For Traders, Market agents and others</Text>

@@ -92,5 +92,7 @@ Before proceeding with the installation, ensure that you have the following prer
 - [React Navigation Documentation](https://reactnavigation.org/docs/getting-started)
 - [Native Wind](https://www.nativewind.dev/quick-starts/expo)
 
-
+```
+eas build --profile development --platform android
+```
 

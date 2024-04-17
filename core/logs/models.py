@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 class PhoneNumber(models.Model):
     number = models.CharField(max_length=20)
@@ -15,3 +16,8 @@ class User(models.Model):
     language = models.ForeignKey(Language, on_delete=models.CASCADE)
     user_type = models.ForeignKey(UserType, on_delete=models.CASCADE)
 
+class crops(models.Model):
+    crop_name = models.CharField(max_length=100)
+
+class Register(models.Model):
+    user = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, blank=True)
