@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
-import { View, Text, TextInput, TouchableOpacity, Alert } from "react-native"; // Import Alert
+import { View, Text, TextInput, TouchableOpacity, Alert, Image } from "react-native"; // Import Alert
 import { useNavigation } from "@react-navigation/native";
 import Ionicons from "@expo/vector-icons/Ionicons";
 import * as Yup from "yup";
@@ -10,65 +10,6 @@ import * as Location from "expo-location";
 
 
 function SignIn() {
-  // const navigation = useNavigation();
-
-  // const [phoneNumber, setPhoneNumber] = useState("");
-  // const [mpin, setMpin] = useState("");
-
-  // useEffect(() => {
-  //   requestLocationPermission();
-  // }, []);
-
-  // const requestLocationPermission = async () => {
-  //   const { status } = await Location.requestForegroundPermissionsAsync();
-  //   if (status === "granted") {
-  //     setLocationPermission(true);
-  //   } else {
-  //     setLocationPermission(false);
-  //   }
-  // };
-
-  // const handlePhoneNumberChange = (value) => {
-  //   const formattedValue = value.replace(/\D/g, "").slice(0, 10);
-  //   setPhoneNumber(formattedValue);
-  // };
-
-  // const handleMpinChange = (value) => {
-  //   const formattedValue = value.replace(/\D/g, "").slice(0, 4);
-  //   setMpin(formattedValue);
-  // };
-
-  // const handleSubmit = async () => {
-  //   try {
-  //     if (!phoneNumber || phoneNumber.length !== 10) {
-  //       throw new Error('Invalid Phone Number');
-  //     }
-
-  //     if (!mpin || mpin.length !== 4) {
-  //       throw new Error('Invalid MPIN');
-  //     }
-
-  //     const response = await fetch('http://192.168.43.249:8000/signin/', {
-  //       method: 'POST',
-  //       headers: {
-  //         'Content-Type': 'application/json',
-  //       },
-  //       body: JSON.stringify({ phone_number: phoneNumber, password: mpin }),
-  //     });
-
-  //     if (!response.ok) {
-  //       throw new Error('Failed to send data to backend');
-  //     }
-
-  //     navigation.navigate('Screen1');
-  //   } catch (error) {
-  //     console.error('Error sending data to backend:', error);
-  //     Alert.alert(
-  //       'Error',
-  //       error.message || 'Failed to send data to backend. Please try again later.',
-  //     );
-  //   }
-  // };
 
   const navigation = useNavigation();
 
@@ -77,12 +18,12 @@ function SignIn() {
 
   const handleSubmit = async () => {
     if (!phoneNumber || phoneNumber.length !== 10) {
-      Alert.alert('Invalid Phone Number', 'Phone number must be 10 digits');
+      Alert.alert('Invalid Phone Number', 'Enter valid phone number');
       return;
     }
 
     if (!mpin || mpin.length !== 4) {
-      Alert.alert('Invalid MPIN', 'MPIN must be 4 digits');
+      Alert.alert('Invalid MPIN', 'Enter valid 4 digit MPIN');
       return;
     }
 
@@ -113,27 +54,25 @@ function SignIn() {
   return (
     <SafeAreaView className="bg-white">
       <View className="h-18 px-4 py-2 flex flex-row items-center border-gray-200 border-b-2">
-        
-        <Text className=" text-lg font-bold text-gray-500 py-2">
-          K-Mart
-        </Text>
+      <Image
+        className=" h-16 w-16"
+        source={require('./images/k-mart-logo.png')}
+      />
+        <Text className="text-base font-semibold px-1 text-center">
+          Welcome to K-Mart! 
+          </Text>
       </View>
-      <View className="h-[80vh] border-gray-200 border-b-2 ">
-        <View className="p-4 pb-2 pt-5">
-          <Text className="text-2xl font-normal">
+      <View className="h-[80vh]  border-gray-200 border-b-2 ">
+        <View className="p-4">
+        <View className="py-4 ">
+        <Text className="text-2xl font-normal">
             Sign in to
           </Text>
           <Text className="text-2xl font-bold">
             Your Account !
           </Text>
         </View>
-        <View className="p-4 pb-2 mt-10 flex flex-row items-center justify-center ">
-          <Text className="text-lg font-normal">
-            Welcome
-          </Text>
-        </View>
-        
-        <View className="py-2 px-4">
+        <View className="py-2">
         <TextInput
           placeholder="Enter Phone Number"
           keyboardType="numeric"
@@ -142,7 +81,7 @@ function SignIn() {
           className="pl-4 text-lg font-light h-14 border-gray-300 border-2 rounded-md"
         ></TextInput>
       </View>
-      <View className="py-2 px-4">
+      <View className="py-2">
         <TextInput
           keyboardType="numeric"
           value={mpin}
@@ -152,7 +91,8 @@ function SignIn() {
           className="pl-4 text-lg font-light h-14 border-gray-300 border-2 rounded-md"
         ></TextInput>
       </View>
-        <View className=" p-4 flex flex-row items-center justify-center">
+
+        <View className=" py-2 flex flex-row items-center justify-center">
           <View className="flex flex-row">
           <Text className="text-gray-700 text-base">Don't have an account ? </Text>
           <TouchableOpacity onPress={() => navigation.navigate('VerifyOTPScreen')}>
@@ -163,8 +103,9 @@ function SignIn() {
           </View>
         </View>
       </View>
+      </View>
       <View className="h-[100vh]">
-      <View className="p-4">
+      <View className="px-4 py-3">
           <TouchableOpacity
             onPress={handleSubmit}
             className="h-14 rounded-lg bg-green-500 flex justify-center items-center"
