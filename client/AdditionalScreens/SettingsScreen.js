@@ -1,4 +1,4 @@
-import { View, Text, TouchableOpacity } from "react-native";
+import { View, Text, TouchableOpacity, Alert } from "react-native";
 import React from "react";
 import { useNavigation } from "@react-navigation/native";
 import Ionicons from "@expo/vector-icons/Ionicons";
@@ -26,6 +26,25 @@ const SettingsScreen = () => {
       Alert.alert('Error', 'Logout failed. Please try again.');
     }
   };
+
+  // const handleDelete = async () => {
+  //   try{
+  //     const response = await fetch('http://192.168.43.249:8000/delete/', {
+  //       method: 'POST',
+  //       headers: {
+  //         'Content-Type': 'application/json',
+  //     },
+  //     });
+
+  //     if (!response.ok) {
+  //       throw new Error('Deletion failed');
+  //     }
+
+  //     navigation.navigate('VerifyNumScreen');
+  //   } catch (error) {
+  //     Alert.alert('Error', 'Account deletion failed. Please try again.');
+  //   }
+  // };
 
   return (
     <SafeAreaView className="bg-white">
@@ -138,6 +157,19 @@ const SettingsScreen = () => {
             />
           </View>
         </TouchableOpacity>
+        {/* <TouchableOpacity onPress={handleDelete}>
+          <View className="px-4 py-2 border-b-2 border-gray-200 flex flex-row justify-between items-center">
+            <View className="flex flex-row justify-start items-center">
+              <Ionicons name="trash-outline" size={20} />
+              <Text className=" px-2 text-base text-gray-500">Delete Account</Text>
+            </View>
+            <Ionicons
+              name="chevron-forward"
+              size={20}
+              color={"rgb(34, 197, 94)"}
+            />
+          </View>
+        </TouchableOpacity> */}
       </View>
       <Footer />
       </View>

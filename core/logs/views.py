@@ -63,6 +63,11 @@ def signout(request):
     logout(request)
     return JsonResponse({'status': 'success', 'message': 'User logged out successfully'}, status=200)
 
+# @csrf_exempt
+# def deleteAC(request):
+#     print(f"{request} this is request")
+#     return JsonResponse({'status': 'success', 'message': 'User deleted successfully'}, status=200)
+
 
 @csrf_exempt
 def phone_number_input(request):
