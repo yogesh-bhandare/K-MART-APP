@@ -59,7 +59,7 @@ function SignIn() {
         source={require('./images/k-mart-logo.png')}
       />
         <Text className="text-base font-semibold px-1 text-center">
-          Welcome to K-Mart! 
+          Welcome to K-Mart
           </Text>
       </View>
       <View className="h-[80vh]  border-gray-200 border-b-2 ">
