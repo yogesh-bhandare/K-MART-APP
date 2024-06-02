@@ -31,7 +31,7 @@ function MoreScreen() {
           />
             </View>
             <View className="pl-4">
-              <Text className="text-base">Ramchandra Bhandare</Text>
+              <Text className="text-base">Yogesh Bhandare</Text>
               <TouchableOpacity
                 className="flex flex-row justify-start items-center"
                 onPress={() => navigation.navigate("ProfileScreen")}
