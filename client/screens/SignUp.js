@@ -25,7 +25,7 @@ function SignUp() {
     }
 
     try {
-      const response = await fetch('http://192.168.43.249:8000/signup/', {
+      const response = await fetch('http://192.168.142.7:8081/signup/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

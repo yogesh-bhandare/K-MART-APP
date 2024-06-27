@@ -24,7 +24,7 @@ function ChangeLang() {
 
   const sendSelectionToBackend = async () => {
     try {
-      const response = await fetch('http://192.168.43.249:8000/language/', {
+      const response = await fetch('http://192.168.142.7:8081/language/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

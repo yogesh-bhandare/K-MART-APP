@@ -1,8 +1,7 @@
 {
   "expo": {
-    "plugins": ["@react-native-firebase/app", "@react-native-firebase/auth"],
-    "name": "kMart",
-    "slug": "kMart",
+    "name": "K-Mart-Application",
+    "slug": "K-Mart-Application",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -12,15 +11,10 @@
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
     "ios": {
       "supportsTablet": true
     },
     "android": {
-      "package": "com.kmart.app",
-      "googleServicesFile": "./google-services.json",
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
@@ -28,11 +22,6 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    },
-    "extra": {
-      "eas": {
-        "projectId": "1527ce4b-67d3-45ce-8b5c-f1e19e72d519"
-      }
     }
   }
 }
