@@ -67,4 +67,4 @@ To get started with K-Mart, follow these steps:
 
 # Demo Video
 
-[![K-Mart Demo Video](./client/assets/Video/kmart.mp4)]
+![K-Mart Demo Video](client/assets/Video/kmart.mp4)
