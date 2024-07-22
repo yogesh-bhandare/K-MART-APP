@@ -68,3 +68,11 @@ To get started with K-Mart, follow these steps:
 ## Demo Video
 
 [![K-Mart Demo Video](/client/assets/K-Mart.png)](/client/assets/Video/kmart.mp4)
+
+## Demo Video
+
+<video width="640" height="360" controls>
+  <source src="client/assets/Video/kmart.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
