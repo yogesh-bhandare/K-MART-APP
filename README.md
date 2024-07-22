@@ -1,98 +1,70 @@
-﻿# K-MART React Native Expo Installation Guide
+# Welcome to K-Mart
 
-This guide provides step-by-step instructions to set up the development environment for the K-MART project using React Native Expo.
+## Project Overview
 
-## Prerequisites
+K-Mart, short for Kisan Mart, is an innovative platform designed for Indian farmers to access real-time market prices for their yields. The app shows prices from nearby and distant markets, helping farmers decide where to sell their produce for maximum profit. Beyond market prices, K-Mart offers features like weather updates, event notifications, government schemes, and order management. A future update will include a Crop Doctor feature, using CNN, deep learning, and ML models with TensorFlow, to diagnose plant diseases.
 
-Before proceeding with the installation, ensure that you have the following prerequisites installed on your system:
+## Motivation
 
-- Node.js
-- npm (Node Package Manager)
+Indian farmers face challenges in getting accurate and timely information about market prices, which can significantly impact their earnings. K-Mart addresses this by providing a comprehensive platform that not only helps farmers get the best prices for their yields but also offers additional resources to support their farming activities and decision-making processes.
 
-## Installation Process
+## What It Does
 
-### 1. Node.js Installation and Setup
+K-Mart allows farmers to:
 
-1. **Download Node.js:**
-   - Visit the [official Node.js website](https://nodejs.org/) and download the latest version of Node.js for your operating system.
+- **Access Market Prices:** View live prices from various markets to choose the most profitable one.
+- **Weather Updates:** Receive timely weather information to plan farming activities.
+- **Event Notifications:** Stay informed about relevant agricultural events and deadlines.
+- **Government Schemes:** Learn about and apply for government schemes and support programs.
+- **Order Management:** Manage and track orders for agricultural inputs and services.
+- **Crop Doctor (Future Update):** Diagnose plant diseases by uploading photos of affected plants.
 
-2. **Install Node.js:**
-   - Follow the installation instructions provided on the Node.js website for your specific operating system.
+## Features
 
-3. **Verify Installation:**
-   - After the installation is complete, open a terminal or command prompt.
-   - Run the following commands to verify that Node.js and npm are installed correctly:
-     ```
-     node -v
-     npm -v
-     ```
-   - These commands should display the installed version of Node.js and npm respectively.
+- **User-Friendly Interface:** Intuitive design for seamless navigation and ease of use.
+- **Real-Time Data:** Access to live market prices and weather updates.
+- **Comprehensive Resource Center:** Information on government schemes, events, and order management.
+- **Secure and Confidential:** Prioritizes user privacy and data security.
+- **Advanced Plant Diagnosis (Future Update):** AI-powered plant disease detection using CNN, deep learning, and ML models.
 
-### 2. React Native Expo Installation
+## How We Built It
 
-1. **Install Expo CLI:**
-   - Open a terminal or command prompt.
-   - Run the following command to install Expo CLI globally:
-     ```
-     npm install -g expo-cli
-     ```
+K-Mart is built using the following technologies:
 
-### 3. Node Module Installation
+- **Frontend:** React Native, Expo
+- **Backend:** Django, Django Rest Framework, Node.js
+- **State Management:** Redux
+- **Database:** MySQL
+- **Authentication:** JWT Authentication
+- **HTTP Requests:** Axios
 
-1. **Install Node Modules:**
-   - Navigate to your project directory in the terminal.
-   - Run the following command to install the required Node modules:
-     ```
-     npm install
-     ```
+The backend processes user inputs and maintains the database, while the frontend offers an interactive user interface for accessing market prices, weather updates, and other features.
 
-### 4. React Navigation Installation and Setup
+## Challenges
 
-1. **Install React Navigation:**
-   - Run the following command in your project directory:
-     ```
-     npm install @react-navigation/native
-     ```
+Integrating the Django-based backend with React Native frontend presented initial challenges, particularly in maintaining real-time data flow and ensuring secure authentication. However, by leveraging Axios for HTTP requests and JWT for authentication, we achieved seamless integration.
 
-2. **Install Dependencies:**
-   - Follow the instructions provided in the [React Navigation documentation](https://reactnavigation.org/docs/getting-started) to install the necessary dependencies for your chosen navigation method (stack, tab, drawer, etc.).
+## What We Learned
 
-### 5. Native Wind Installation for Expo
+Developing K-Mart provided valuable insights into full-stack development, especially in backend-frontend communication and secure data management. We enhanced our skills in React Native, Django, state management, and machine learning model integration, leading to a robust and user-centric application.
 
-1. **Install Native Wind:**
-   - Run the following command in your project directory:
-     ```
-     expo install react-native-native-wind
-     ```
+## What's Next for K-Mart
 
-### 6. Running Expo App
+Future enhancements for K-Mart include:
 
-1. **Start the Development Server:**
-   - Navigate to your project directory in the terminal.
-   - Run the following command to start the Expo development server:
-     ```
-     npm expo start
-     ```
+- **Crop Doctor Feature:** Integrating advanced analytics for plant disease detection using CNN, deep learning, and ML models.
+- **Enhanced User Experience:** Adding new features to further support farmers' decision-making processes.
+- **Expanded Resource Center:** Providing more comprehensive information on agricultural practices, government schemes, and market trends.
 
-2. **Run on Device or Simulator:**
-   - Follow the instructions printed in the terminal to run the app on your device or simulator.
+## Getting Started
 
-### 7. Downloading Expo App on Mobile
+To get started with K-Mart, follow these steps:
 
-1. **Download Expo Client:**
-   - Install the Expo Client app on your iOS or Android device from the [App Store](https://apps.apple.com/us/app/expo-go/id982107779) or [Google Play Store](https://play.google.com/store/apps/details?id=host.exp.exponent&hl=en&gl=US).
+**Clone the repository:**
+   ```bash
+   git clone https://github.com/yourusername/k-mart.git
+    ```
 
-2. **Scan QR Code:**
-   - Once the Expo development server is running, use the Expo Client app to scan the QR code displayed in the terminal to open your app on your mobile device.
+# Demo Video
 
-## Additional Resources
-
-- [Node.js Official Website](https://nodejs.org/)
-- [React Native Expo Documentation](https://reactnative.dev/docs/environment-setup)
-- [React Navigation Documentation](https://reactnavigation.org/docs/getting-started)
-- [Native Wind](https://www.nativewind.dev/quick-starts/expo)
-
-```
-eas build --profile development --platform android
-```
-
+[![K-Mart Demo Video](/client/assets/Video/kmart.mp4)]
