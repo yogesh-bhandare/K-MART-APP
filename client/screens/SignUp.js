@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { View, Text, TouchableOpacity, TextInput, Alert, Image } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import Ionicons from "@expo/vector-icons/Ionicons";
+import { BASE_URL } from "../config";
 
 function SignUp() {
   const navigation = useNavigation();
@@ -25,7 +26,7 @@ function SignUp() {
     }
 
     try {
-      const response = await fetch('http://192.168.142.7:8081/signup/', {
+      const response = await fetch(`${BASE_URL}/signup/`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

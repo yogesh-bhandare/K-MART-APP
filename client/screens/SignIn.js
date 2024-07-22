@@ -6,6 +6,7 @@ import Ionicons from "@expo/vector-icons/Ionicons";
 import * as Yup from "yup";
 import { useEffect } from "react";
 import * as Location from "expo-location";
+import { BASE_URL } from "../config";
 
 
 
@@ -28,7 +29,7 @@ function SignIn() {
     }
 
     try {
-      const response = await fetch('http://192.168.142.7:8081/signin/', {
+      const response = await fetch(`${BASE_URL}/signin/`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
