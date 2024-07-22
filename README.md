@@ -63,8 +63,8 @@ To get started with K-Mart, follow these steps:
 **Clone the repository:**
    ```bash
    git clone https://github.com/yourusername/k-mart.git
-    ```
+   ```
 
 # Demo Video
 
-[![K-Mart Demo Video](/client/assets/Video/kmart.mp4)]
+[![K-Mart Demo Video](./client/assets/Video/kmart.mp4)]
