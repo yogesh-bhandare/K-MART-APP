@@ -74,6 +74,7 @@ To get started with K-Mart, follow these steps:
 
 ## Demo Video
 
+Click on thumbnail and download video!
 [![K-Mart Demo Video](/client/assets/K-Mart.png)](/client/assets/Video/kmart.mp4)
 
 
