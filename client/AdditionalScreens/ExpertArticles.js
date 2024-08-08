@@ -10,9 +10,22 @@ import React, { useState, useEffect } from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useNavigation } from "@react-navigation/native";
 import Ionicons from "@expo/vector-icons/Ionicons";
+import api from "../api"
 
 const ExpertArticles = () => {
   const navigation = useNavigation();
+  const [articles, setArticle] = useState([]);
+
+  const getArticleData = () => {
+    api.get(`/content/articles/`)
+    .then((response) => setArticle(response.data))
+    .catch((error) => console.log("Error loading Data: ",error));
+  }
+
+  useEffect(() => {
+    getArticleData();
+  }, [])
+
   return (
     <SafeAreaView>
       <View className="bg-white">
@@ -26,26 +39,28 @@ const ExpertArticles = () => {
           <TextInput placeholder="Search" className=" text-lg font-light" />
         </View>
         <ScrollView>
-          <View className="h-[13vh] border-2 bg-white border-gray-100  ">
-              <View className="py-2">
-                <View className="  flex flex-row items-center justify-center ">
-                  <Image
-                    className="h-20 w-36 rounded-sm"
-                    source={{
-                      uri: "https://img.freepik.com/free-photo/image-wheat-field-with-blue-sky_661209-305.jpg?t=st=1712774045~exp=1712777645~hmac=f0f1d4809bd9dd00d40087281c1feb8c60f7426de520b05dbdb9f694291f9abc&w=1060",
-                    }}
-                  />
-                  <View className="px-2 w-[55%]">
-                  <Text className=" font-semibold">
-                    Wheat is the dominant crop.
-                  </Text>
-                  <Text>
-                    18 Feb 2024
-                  </Text>
+          {articles.map((article)=>( 
+            <View className="h-[13vh] border-2 bg-white border-gray-100  ">
+                <View className="py-2">
+                  <View className="  flex flex-row items-center justify-center ">
+                    <Image
+                      className="h-20 w-36 rounded-sm"
+                      source={{
+                        uri: `${article.image}`,
+                      }}
+                    />
+                    <View className="px-2 w-[55%]">
+                    <Text className=" font-semibold">
+                      {article.name}
+                    </Text>
+                    <Text>
+                      {article.description}
+                    </Text>
+                    </View>
                   </View>
-                </View>
+              </View>
             </View>
-          </View>
+          ))} 
         </ScrollView>
       </View>
     </SafeAreaView>

@@ -10,9 +10,22 @@ import React, { useState, useEffect } from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useNavigation } from "@react-navigation/native";
 import Ionicons from "@expo/vector-icons/Ionicons";
+import api from "../api";
 
 const EventsScreen = () => {
   const navigation = useNavigation();
+  const [events, setEvents] = useState([]);
+
+  const getArticleData = () => {
+  api.get('/content/events/')
+  .then((response) => setEvents(response.data))
+  .catch((error) => console.log("This is error: ",error))
+  }
+
+  useEffect(() => {
+    getArticleData()
+  }, [])
+
   return (
     <SafeAreaView>
       <View className="">
@@ -28,23 +41,24 @@ const EventsScreen = () => {
         </View>
         </View>
         <ScrollView>
+          {events.map((event) => (
         <View className="py-2 bg-white">
           <View className="py-1 border-gray-200 border-t-2 flex flex-row items-center justify-center ">
             <Image
               className="h-20 w-36 rounded-sm"
               source={{
-                uri: "https://img.freepik.com/free-photo/image-wheat-field-with-blue-sky_661209-305.jpg?t=st=1712774045~exp=1712777645~hmac=f0f1d4809bd9dd00d40087281c1feb8c60f7426de520b05dbdb9f694291f9abc&w=1060",
+                uri: `${event.image}`,
               }}
             />
             <View className="py-2 px-2 w-[55%]">
-              <Text className=" text-base font-semibold">AgriTech 2024</Text>
+              <Text className=" text-base font-semibold">{event.name}</Text>
               <View className="py-1 flex flex-row items-center">
                 <Ionicons
                   name="calendar-outline"
                   size={22}
                   color={"rgb(34, 197, 94)"}
                 />
-                <Text className="px-1 text-base">22May ~ 24May</Text>
+                <Text className="px-1 text-base">{event.date}</Text>
               </View>
               <View className="py-1 flex flex-row items-center">
                 <Ionicons
@@ -52,39 +66,12 @@ const EventsScreen = () => {
                   size={22}
                   color={"rgb(34, 197, 94)"}
                 />
-                <Text className="px-1 text-base">Pune</Text>
+                <Text className="px-1 text-base">{event.location}</Text>
               </View>
             </View>
           </View>
-          <View className="py-1 border-gray-200 border-t-2 flex flex-row items-center justify-center ">
-            <Image
-              className="h-20 w-36 rounded-sm"
-              source={{
-                uri: "https://img.freepik.com/free-photo/image-wheat-field-with-blue-sky_661209-305.jpg?t=st=1712774045~exp=1712777645~hmac=f0f1d4809bd9dd00d40087281c1feb8c60f7426de520b05dbdb9f694291f9abc&w=1060",
-              }}
-            />
-            <View className="py-2 px-2 w-[55%]">
-              <Text className=" text-base font-semibold">AgriTech 2024</Text>
-              <View className="py-1 flex flex-row items-center">
-                <Ionicons
-                  name="calendar-outline"
-                  size={22}
-                  color={"rgb(34, 197, 94)"}
-                />
-                <Text className="px-1 text-base">22May ~ 24May</Text>
-              </View>
-              <View className="py-1 flex flex-row items-center">
-                <Ionicons
-                  name="location-outline"
-                  size={22}
-                  color={"rgb(34, 197, 94)"}
-                />
-                <Text className="px-1 text-base">Pune</Text>
-              </View>
-            </View>
-          </View>
-          
         </View>
+          ))}
         </ScrollView>
       </View>
     </SafeAreaView>

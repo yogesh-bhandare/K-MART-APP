@@ -21,3 +21,12 @@ class crops(models.Model):
 
 class Register(models.Model):
     user = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, blank=True)
+
+class Crop(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    crop_name = models.CharField(max_length=50)
+    crop_image = models.ImageField(upload_to="Crop_Images")
+
+
+
+

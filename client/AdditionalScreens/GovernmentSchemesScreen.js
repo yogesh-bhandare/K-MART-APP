@@ -10,9 +10,22 @@ import React, { useState, useEffect } from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useNavigation } from "@react-navigation/native";
 import Ionicons from "@expo/vector-icons/Ionicons";
+import api from "../api";
 
 const GovernmentSchemesScreen = () => {
   const navigation = useNavigation();
+  const [schemes, setSchemes] = useState([]);
+
+  const getSchemeData = () => {
+  api.get('/content/schemes/')
+  .then((response)=>setSchemes(response.data))
+  .catch((error)=>console.log("Error occured: ",error))
+  }
+
+  useEffect(() => {
+    getSchemeData()
+  }, [])
+
   return (
     <SafeAreaView>
       <View className="bg-white">
@@ -26,26 +39,28 @@ const GovernmentSchemesScreen = () => {
           <TextInput placeholder="Search" className=" text-lg font-light" />
         </View>
         <ScrollView>
+          {schemes.map((scheme) => (
           <View className="h-[13vh] border-2 bg-white border-gray-100  ">
               <View className="py-2">
                 <View className="  flex flex-row items-center justify-center ">
                   <Image
                     className="h-20 w-36 rounded-sm"
                     source={{
-                      uri: "https://img.freepik.com/free-photo/image-wheat-field-with-blue-sky_661209-305.jpg?t=st=1712774045~exp=1712777645~hmac=f0f1d4809bd9dd00d40087281c1feb8c60f7426de520b05dbdb9f694291f9abc&w=1060",
+                      uri: `${scheme.image}`,
                     }}
                   />
                   <View className="px-2 w-[55%]">
                   <Text className=" font-semibold">
-                    Wheat is the dominant crop.
+                    {scheme.name}
                   </Text>
                   <Text>
-                    18 Feb 2024
+                    {scheme.date}
                   </Text>
                   </View>
                 </View>
             </View>
           </View>
+          ))}
         </ScrollView>
       </View>
     </SafeAreaView>
