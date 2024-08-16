@@ -40,7 +40,7 @@ const ExpertArticles = () => {
         </View>
         <ScrollView>
           {articles.map((article)=>( 
-            <View className="h-[13vh] border-2 bg-white border-gray-100  ">
+            <View key={article.id} className="h-[13vh] border-2 bg-white border-gray-100  ">
                 <View className="py-2">
                   <View className="  flex flex-row items-center justify-center ">
                     <Image

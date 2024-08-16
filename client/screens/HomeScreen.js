@@ -20,23 +20,23 @@ import FeedbackComponent from "../components/FeedbackComponent";
 export default function HomeScreen(){
   const navigation = useNavigation();
     return(
-        <SafeAreaView className="bg-gray-100">
+        <SafeAreaView className="bg-gray-100 flex-1">
        <View className=" bg-white px-4 py-4 border-gray-200 border-b-2">
         <View className="flex flex-row items-center justify-between pt-1 ">
           <Text className="text-xl  font-semibold">Welcome to K-Mart</Text>
         </View>
       </View>
-        <View className="h-[82vh]">
+        <View className="flex-1">
           <ScrollView>
           <CompleteProfile/>
           
           <TempratureComponent/>
 
+
+          <ViewMoreComponent/>
           <PriceUpdateComponent/>
 
           <WhatsAppComponent/>
-
-          <ViewMoreComponent/>
 
           <CropDoctorComponent/>
 
@@ -55,7 +55,7 @@ export default function HomeScreen(){
           <FeedbackComponent/>
           </ScrollView>
         </View>
-        <Footer/>
+        <Footer className=" absolute bottom-0"/>
       </SafeAreaView>
     )
 }

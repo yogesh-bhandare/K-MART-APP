@@ -6,9 +6,9 @@ import { useNavigation } from "@react-navigation/native";
 const PriceUpdateComponent = () => {
   const navigation = useNavigation();
   return (
-    <View className="py-2 border-2 bg-white border-gray-100  ">
+    <View className="py-2 my-2 border-2 bg-white border-gray-100  ">
       <View className="px-6 w-full">
-        <View className="py-3">
+        <View className="py-2">
           <Text className="text-lg font-semibold ">Market Prices Update</Text>
         </View>
         <View className="flex flex-row items-center justify-center border-b-2 border-gray-100 py-2">
@@ -48,7 +48,7 @@ const PriceUpdateComponent = () => {
           <Ionicons name="chevron-forward" size={22} color={"#013220"} />
         </View>
         <TouchableOpacity onPress={() => navigation.navigate("MandiScreen")}>
-          <View className=" flex flex-row items-center justify-center border-t-2 border-gray-100 pt-2">
+          <View className=" flex flex-row items-center justify-center border-t-2 border-gray-100 py-2">
             <Text className="text-green-500 pr-2 font-semibold text-lg">
               View All Markets
             </Text>

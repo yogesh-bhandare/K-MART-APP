@@ -53,7 +53,7 @@ function SignIn() {
   
 
   return (
-    <SafeAreaView className="bg-white">
+    <SafeAreaView className="bg-white flex-1">
       <View className="h-18 px-4 py-2 flex flex-row items-center border-gray-200 border-b-2">
       <Image
         className=" h-16 w-16"
@@ -63,7 +63,7 @@ function SignIn() {
           Welcome to K-Mart
           </Text>
       </View>
-      <View className="h-[80vh]  border-gray-200 border-b-2 ">
+      <View className="flex-1 border-gray-200 border-b-2 ">
         <View className="p-4">
         <View className="py-4 ">
         <Text className="text-2xl font-normal">
@@ -105,7 +105,7 @@ function SignIn() {
         </View>
       </View>
       </View>
-      <View className="h-[100vh]">
+      <View className="flex-1 absolute bottom-0 left-0 right-0">
       <View className="px-4 py-3">
           <TouchableOpacity
             onPress={handleSubmit}

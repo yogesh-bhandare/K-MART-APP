@@ -31,15 +31,15 @@ const InviteFriendScreen = () => {
   };
 
   return (
-    <SafeAreaView>
-      <View className="bg-white h-[91%]">
+    <SafeAreaView className="flex-1">
+      <View className="bg-white flex-1">
         <View className="h-14 px-4 py-2 flex flex-row items-center border-gray-200 border-b-2">
           <TouchableOpacity onPress={() => navigation.navigate("MoreScreen")}>
             <Ionicons name="chevron-back" size={22} color={"rgb(75 85 99)"} />
           </TouchableOpacity>
           <Text className=" text-sm text-gray-600">Invite Friends</Text>
         </View>
-        <View className=" h-[84vh]">
+        <View className=" flex-1">
           <View className="flex-1 flex-col items-center justify-center">
             <View className="h-20 w-20 rounded-full bg-green-300">
             <Image

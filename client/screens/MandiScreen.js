@@ -333,7 +333,7 @@ function MandiScreen() {
   };
 
   return (
-    <SafeAreaView className="bg-white">
+    <SafeAreaView className="bg-white flex-1">
       <View className=" px-4 py-4 border-gray-200 border-b-2">
         <View className="flex flex-row items-center justify-between pt-1 ">
           <Text className="text-xl font-semibold">Mandi</Text>
@@ -364,7 +364,7 @@ function MandiScreen() {
         </View>
       </View>
       <View className="py-1 bg-gray-200"></View>
-      <View className=" max-h-[69vh]">
+      <View className="flex-1">
         <View className={`h-${pinnedItems.length * 36}`}>
           <FlatList
             data={pinnedItems}
@@ -424,7 +424,7 @@ function MandiScreen() {
           keyExtractor={(item) => item.id.toString()}
         />
       </View>
-      <Footer />
+      <Footer className="absolute bottom-0" />
     </SafeAreaView>
   );
 }

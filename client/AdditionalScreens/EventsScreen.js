@@ -42,7 +42,7 @@ const EventsScreen = () => {
         </View>
         <ScrollView>
           {events.map((event) => (
-        <View className="py-2 bg-white">
+        <View key={event.id} className="py-2 bg-white">
           <View className="py-1 border-gray-200 border-t-2 flex flex-row items-center justify-center ">
             <Image
               className="h-20 w-36 rounded-sm"

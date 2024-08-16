@@ -51,14 +51,14 @@ function SignUp() {
   };
 
   return (
-    <SafeAreaView className="bg-gray-100">
+    <SafeAreaView className="bg-gray-100 flex-1">
       <View className="h-14 px-4 py-2 bg-white flex flex-row items-center border-gray-200 border-b-2">
         <TouchableOpacity onPress={() => navigation.navigate("VerifyNumScreen")}>
           <Ionicons name="chevron-back" size={22} color={"rgb(75 85 99)"} />
         </TouchableOpacity>
         <Text className=" text-lg font-semibold">K-Mart</Text>
       </View>
-      <View className="h-[100vh] bg-white ">
+      <View className="flex-1 bg-white ">
           <View className=" bg-white my-2">
             <View className=" py-4 px-4 ">
               <Text className="text-2xl font-normal">Create New</Text>

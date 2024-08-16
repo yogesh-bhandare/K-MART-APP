@@ -6,9 +6,9 @@ import { useNavigation } from "@react-navigation/native";
 const ViewMoreComponent = () => {
   const navigation = useNavigation();
   return (
-    <View className="py-2 border-2 bg-white border-gray-100  ">
+    <View className="py-2 mb-1 rounded-lg shadow-lg shadow-black mx-4 bg-white  flex flex-row justify-center items-center">
       <View className="px-4 w-full">
-        <View className="flex flex-row items-center justify-evenly py-4">
+        <View className="flex flex-row items-center justify-evenly py-2">
           <TouchableOpacity onPress={() => navigation.navigate("CommingSoon")}>
             <View className="flex items-center justify-center">
               <Image
@@ -44,7 +44,7 @@ const ViewMoreComponent = () => {
               <Text className="py-2">News</Text>
             </View>
           </TouchableOpacity>
-          <TouchableOpacity onPress={() => navigation.navigate("ExpertArticlesScreen")}>
+          {/* <TouchableOpacity onPress={() => navigation.navigate("ExpertArticlesScreen")}>
             <View className="flex items-center justify-center">
               <Image
                 className="h-16 w-16 rounded-full"
@@ -54,10 +54,10 @@ const ViewMoreComponent = () => {
               />
               <Text className="py-2">Expert Article</Text>
             </View>
-          </TouchableOpacity>
+          </TouchableOpacity> */}
         </View>
 
-        <TouchableOpacity onPress={() => navigation.navigate("MoreScreen")}>
+        {/* <TouchableOpacity onPress={() => navigation.navigate("MoreScreen")}>
           <View className=" flex flex-row items-center justify-center border-t-2 border-gray-100 pt-2">
             <Text className="text-green-500 pr-2 font-semibold text-lg">
               View More
@@ -68,7 +68,7 @@ const ViewMoreComponent = () => {
               color={"rgb(34, 197, 94)"}
             />
           </View>
-        </TouchableOpacity>
+        </TouchableOpacity> */}
       </View>
     </View>
   );

@@ -47,8 +47,8 @@ const CropDoctorScreen = () => {
   };
 
   return (
-    <SafeAreaView>
-      <View className="bg-white h-[91%]">
+    <SafeAreaView className="flex-1">
+      <View className="bg-white flex-1">
       <View className="h-14 px-4 py-2 flex flex-row items-center border-gray-200 border-b-2">
         <TouchableOpacity onPress={() => navigation.navigate("MoreScreen")}>
           <Ionicons name="chevron-back" size={22} color={"rgb(75 85 99)"} />

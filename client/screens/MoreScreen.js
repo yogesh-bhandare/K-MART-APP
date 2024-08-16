@@ -13,13 +13,13 @@ import FeedBackComp from "../components/FeedBackComp";
 function MoreScreen() {
   const navigation = useNavigation();
   return (
-    <SafeAreaView className="bg-white">
+    <SafeAreaView className="bg-white flex-1">
       <View className="px-4 py-4 border-gray-200 border-b-2">
         <View className="flex flex-row items-center justify-between pt-1 ">
           <Text className="text-xl font-semibold">More</Text>
         </View>
       </View>
-      <View className="h-[82vh]">
+      <View className="flex-1">
         <ScrollView>
           <View className="p-4 h-24 flex flex-row justify-start items-center">
             <View className="h-20 w-20 rounded-full bg-green-300">
@@ -59,7 +59,7 @@ function MoreScreen() {
           <View className="h-24 bg-gray-200" />
         </ScrollView>
       </View>
-      <Footer />
+      <Footer className="absolute bottom-0" />
     </SafeAreaView>
   );
 }

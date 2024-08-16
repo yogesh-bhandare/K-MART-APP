@@ -47,8 +47,8 @@ const CropDoctorHomeScreen = () => {
   };
 
   return (
-    <SafeAreaView>
-      <View className="bg-white h-[91%]">
+    <SafeAreaView className="flex-1">
+      <View className="bg-white flex-1">
       <View className="h-14 px-4 py-2 flex flex-row items-center border-gray-200 border-b-2">
         <Text className=" text-lg font-semibold">Crop Doctor</Text>
       </View>
@@ -86,7 +86,7 @@ const CropDoctorHomeScreen = () => {
           </Text>
         </View>
       </View>
-      <Footer/>
+      <Footer className=" absolute bottom-0"/>
     </SafeAreaView>
   );
 };

@@ -31,6 +31,7 @@ import EventsScreen from './AdditionalScreens/EventsScreen';
 import NewsScreen from './AdditionalScreens/NewsScreen';
 import CommmingSoonScreen from './AdditionalScreens/CommingSoonScreen';
 import SplashScreen from './screens/SplashScreen';
+import SellScreen from './screens/SellScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -56,6 +57,7 @@ export default function Navigation() {
             <Stack.Screen name="VerifyOTPScreen" component={SignUp} />
             <Stack.Screen name="HomeScreen" component={HomeScreen} />
             <Stack.Screen name="MandiScreen" component={MandiScreen} />
+            <Stack.Screen name="SellScreen" component={SellScreen} />
             <Stack.Screen name="CropDoctorHome" component={CropDoctorHomeScreen} />
             <Stack.Screen name="MoreScreen" component={MoreScreen} />
             <Stack.Screen name="ProfileScreen" component={ProfileScreen} />
